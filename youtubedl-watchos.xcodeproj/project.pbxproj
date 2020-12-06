@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D72C93D4257D97740056D0BA /* youtubedl-watchos WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D72C93DA257D97740056D0BA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C93D8257D97740056D0BA /* Interface.storyboard */; };
+		D72C93DC257D97770056D0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72C93DB257D97770056D0BA /* Assets.xcassets */; };
+		D72C93E3257D97770056D0BA /* youtubedl-watchos WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D72C93E2257D97770056D0BA /* youtubedl-watchos WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D72C93E8257D97770056D0BA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C93E7257D97770056D0BA /* InterfaceController.swift */; };
+		D72C93EA257D97770056D0BA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C93E9257D97770056D0BA /* ExtensionDelegate.swift */; };
+		D72C93EC257D97770056D0BA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C93EB257D97770056D0BA /* ComplicationController.swift */; };
+		D72C93EE257D97780056D0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72C93ED257D97780056D0BA /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D72C93D5257D97740056D0BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D72C93C9257D97740056D0BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D72C93D2257D97740056D0BA;
+			remoteInfo = "youtubedl-watchos WatchKit App";
+		};
+		D72C93E4257D97770056D0BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D72C93C9257D97740056D0BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D72C93E1257D97770056D0BA;
+			remoteInfo = "youtubedl-watchos WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D72C93F5257D97780056D0BA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D72C93E3257D97770056D0BA /* youtubedl-watchos WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D72C93F9257D97780056D0BA /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				D72C93D4257D97740056D0BA /* youtubedl-watchos WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D72C93CF257D97740056D0BA /* youtubedl-watchos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtubedl-watchos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtubedl-watchos WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72C93D9257D97740056D0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		D72C93DB257D97770056D0BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D72C93DD257D97770056D0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D72C93E2257D97770056D0BA /* youtubedl-watchos WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "youtubedl-watchos WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D72C93E7257D97770056D0BA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		D72C93E9257D97770056D0BA /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		D72C93EB257D97770056D0BA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		D72C93ED257D97780056D0BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D72C93EF257D97780056D0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D72C93DF257D97770056D0BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D72C93C8257D97740056D0BA = {
+			isa = PBXGroup;
+			children = (
+				D72C93D7257D97740056D0BA /* youtubedl-watchos WatchKit App */,
+				D72C93E6257D97770056D0BA /* youtubedl-watchos WatchKit Extension */,
+				D72C93D0257D97740056D0BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D72C93D0257D97740056D0BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D72C93CF257D97740056D0BA /* youtubedl-watchos.app */,
+				D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */,
+				D72C93E2257D97770056D0BA /* youtubedl-watchos WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D72C93D7257D97740056D0BA /* youtubedl-watchos WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				D72C93D8257D97740056D0BA /* Interface.storyboard */,
+				D72C93DB257D97770056D0BA /* Assets.xcassets */,
+				D72C93DD257D97770056D0BA /* Info.plist */,
+			);
+			path = "youtubedl-watchos WatchKit App";
+			sourceTree = "<group>";
+		};
+		D72C93E6257D97770056D0BA /* youtubedl-watchos WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D72C93E7257D97770056D0BA /* InterfaceController.swift */,
+				D72C93E9257D97770056D0BA /* ExtensionDelegate.swift */,
+				D72C93EB257D97770056D0BA /* ComplicationController.swift */,
+				D72C93ED257D97780056D0BA /* Assets.xcassets */,
+				D72C93EF257D97780056D0BA /* Info.plist */,
+			);
+			path = "youtubedl-watchos WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D72C93CE257D97740056D0BA /* youtubedl-watchos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D72C93FA257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos" */;
+			buildPhases = (
+				D72C93CD257D97740056D0BA /* Resources */,
+				D72C93F9257D97780056D0BA /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D72C93D6257D97740056D0BA /* PBXTargetDependency */,
+			);
+			name = "youtubedl-watchos";
+			productName = "youtubedl-watchos";
+			productReference = D72C93CF257D97740056D0BA /* youtubedl-watchos.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		D72C93D2257D97740056D0BA /* youtubedl-watchos WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D72C93F6257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos WatchKit App" */;
+			buildPhases = (
+				D72C93D1257D97740056D0BA /* Resources */,
+				D72C93F5257D97780056D0BA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D72C93E5257D97770056D0BA /* PBXTargetDependency */,
+			);
+			name = "youtubedl-watchos WatchKit App";
+			productName = "youtubedl-watchos WatchKit App";
+			productReference = D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		D72C93E1257D97770056D0BA /* youtubedl-watchos WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D72C93F2257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos WatchKit Extension" */;
+			buildPhases = (
+				D72C93DE257D97770056D0BA /* Sources */,
+				D72C93DF257D97770056D0BA /* Frameworks */,
+				D72C93E0257D97770056D0BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "youtubedl-watchos WatchKit Extension";
+			productName = "youtubedl-watchos WatchKit Extension";
+			productReference = D72C93E2257D97770056D0BA /* youtubedl-watchos WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D72C93C9257D97740056D0BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					D72C93CE257D97740056D0BA = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					D72C93D2257D97740056D0BA = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					D72C93E1257D97770056D0BA = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = D72C93CC257D97740056D0BA /* Build configuration list for PBXProject "youtubedl-watchos" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D72C93C8257D97740056D0BA;
+			productRefGroup = D72C93D0257D97740056D0BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D72C93CE257D97740056D0BA /* youtubedl-watchos */,
+				D72C93D2257D97740056D0BA /* youtubedl-watchos WatchKit App */,
+				D72C93E1257D97770056D0BA /* youtubedl-watchos WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D72C93CD257D97740056D0BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D72C93D1257D97740056D0BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D72C93DC257D97770056D0BA /* Assets.xcassets in Resources */,
+				D72C93DA257D97740056D0BA /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D72C93E0257D97770056D0BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D72C93EE257D97780056D0BA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D72C93DE257D97770056D0BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D72C93EA257D97770056D0BA /* ExtensionDelegate.swift in Sources */,
+				D72C93E8257D97770056D0BA /* InterfaceController.swift in Sources */,
+				D72C93EC257D97770056D0BA /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D72C93D6257D97740056D0BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D72C93D2257D97740056D0BA /* youtubedl-watchos WatchKit App */;
+			targetProxy = D72C93D5257D97740056D0BA /* PBXContainerItemProxy */;
+		};
+		D72C93E5257D97770056D0BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D72C93E1257D97770056D0BA /* youtubedl-watchos WatchKit Extension */;
+			targetProxy = D72C93E4257D97770056D0BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D72C93D8257D97740056D0BA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D72C93D9257D97740056D0BA /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D72C93F0257D97780056D0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D72C93F1257D97780056D0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D72C93F3257D97780056D0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC478YRWM8;
+				INFOPLIST_FILE = "youtubedl-watchos WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bpm.youtubedl.watchos.youtubedl-watchos.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		D72C93F4257D97780056D0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC478YRWM8;
+				INFOPLIST_FILE = "youtubedl-watchos WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bpm.youtubedl.watchos.youtubedl-watchos.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		D72C93F7257D97780056D0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC478YRWM8;
+				IBSC_MODULE = youtubedl_watchos_WatchKit_Extension;
+				INFOPLIST_FILE = "youtubedl-watchos WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bpm.youtubedl.watchos.youtubedl-watchos.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Debug;
+		};
+		D72C93F8257D97780056D0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZC478YRWM8;
+				IBSC_MODULE = youtubedl_watchos_WatchKit_Extension;
+				INFOPLIST_FILE = "youtubedl-watchos WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bpm.youtubedl.watchos.youtubedl-watchos.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.1;
+			};
+			name = Release;
+		};
+		D72C93FB257D97780056D0BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZC478YRWM8;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bpm.youtubedl.watchos.youtubedl-watchos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D72C93FC257D97780056D0BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZC478YRWM8;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bpm.youtubedl.watchos.youtubedl-watchos";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D72C93CC257D97740056D0BA /* Build configuration list for PBXProject "youtubedl-watchos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72C93F0257D97780056D0BA /* Debug */,
+				D72C93F1257D97780056D0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D72C93F2257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72C93F3257D97780056D0BA /* Debug */,
+				D72C93F4257D97780056D0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D72C93F6257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72C93F7257D97780056D0BA /* Debug */,
+				D72C93F8257D97780056D0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D72C93FA257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D72C93FB257D97780056D0BA /* Debug */,
+				D72C93FC257D97780056D0BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D72C93C9257D97740056D0BA /* Project object */;
+}
