@@ -1,15 +1,70 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11134" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11055"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Home-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller title="Home" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="youtubedl_watchos_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="Uye-xf-Sds">
+                            <connections>
+                                <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="92" y="1"/>
+        </scene>
+        <!--VideoListInterfaceController-->
+        <scene sceneID="6CP-fK-CVF">
+            <objects>
+                <controller identifier="VideoListInterfaceController" id="msI-YC-g7P" customClass="VideoListInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="iwV-NY-kBI">
+                            <items>
+                                <tableRow identifier="VideoRow" id="mqx-3d-RrS" customClass="VideoRow" customModule="youtubedl_watchos_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="tYe-qQ-bVm">
+                                        <items>
+                                            <label alignment="left" text="Label" id="s08-8O-Sw8"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="s08-8O-Sw8" id="pwG-uQ-iDH"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="videoTableRow" destination="iwV-NY-kBI" id="1cm-4s-cfY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="60" y="264"/>
+        </scene>
+        <!--Now Playing-->
+        <scene sceneID="osD-rO-mxG">
+            <objects>
+                <controller identifier="NowPlayingInterfaceController" title="Now Playing" id="IGU-mI-QIU" customClass="NowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="MiS-2n-4v5"/>
+                        <movie width="1" height="100" alignment="left" id="T1W-VJ-tpl"/>
+                        <label alignment="left" text="Label" id="mYm-eV-xkZ"/>
+                    </items>
+                    <connections>
+                        <outlet property="movie" destination="T1W-VJ-tpl" id="Ty4-Wd-Ism"/>
+                        <outlet property="statusLabel" destination="mYm-eV-xkZ" id="1ec-WO-HGF"/>
+                        <outlet property="titleLabel" destination="MiS-2n-4v5" id="oxW-mj-BkM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="546" y="1"/>
         </scene>
     </scenes>
 </document>

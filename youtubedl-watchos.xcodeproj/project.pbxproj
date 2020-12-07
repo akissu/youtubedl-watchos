@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19755775A78386E2746D378D /* Pods_youtubedl_watchos_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 091A924921D9F8850687DF47 /* Pods_youtubedl_watchos_WatchKit_Extension.framework */; };
+		708968BD34B9CC6814BC4F63 /* Pods_youtubedl_watchos_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F3CD2AA70C12AF2151C4C9 /* Pods_youtubedl_watchos_WatchKit_App.framework */; };
+		77992F8531532D5947DE79D6 /* Pods_youtubedl_watchos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C43B84CADD4AD39CE7AFF2B /* Pods_youtubedl_watchos.framework */; };
 		D72C93D4257D97740056D0BA /* youtubedl-watchos WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D72C93DA257D97740056D0BA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C93D8257D97740056D0BA /* Interface.storyboard */; };
 		D72C93DC257D97770056D0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72C93DB257D97770056D0BA /* Assets.xcassets */; };
@@ -15,6 +18,11 @@
 		D72C93EA257D97770056D0BA /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C93E9257D97770056D0BA /* ExtensionDelegate.swift */; };
 		D72C93EC257D97770056D0BA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C93EB257D97770056D0BA /* ComplicationController.swift */; };
 		D72C93EE257D97780056D0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72C93ED257D97780056D0BA /* Assets.xcassets */; };
+		D72C9401257D997F0056D0BA /* NowPlayingInterfaceContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C9400257D997F0056D0BA /* NowPlayingInterfaceContoller.swift */; };
+		D72C940A257DA8CD0056D0BA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C9409257DA8CD0056D0BA /* Settings.swift */; };
+		D72C9410257DAC210056D0BA /* VideoListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C940F257DAC210056D0BA /* VideoListInterfaceController.swift */; };
+		D72C9418257DACCE0056D0BA /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C9417257DACCE0056D0BA /* Video.swift */; };
+		D72C9430257DB42D0056D0BA /* VideoTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C942F257DB42D0056D0BA /* VideoTableRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +68,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		091A924921D9F8850687DF47 /* Pods_youtubedl_watchos_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtubedl_watchos_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19272E99B57483512C706971 /* Pods-youtubedl-watchos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos.debug.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos/Pods-youtubedl-watchos.debug.xcconfig"; sourceTree = "<group>"; };
+		2E93476E7FE3B1E19083E8E1 /* Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		39579B396DE2E619EACA09CA /* Pods-youtubedl-watchos WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		3B2E2AB7002996FD2B7EA3E3 /* Pods-youtubedl-watchos WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit App/Pods-youtubedl-watchos WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		65F3CD2AA70C12AF2151C4C9 /* Pods_youtubedl_watchos_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtubedl_watchos_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C43B84CADD4AD39CE7AFF2B /* Pods_youtubedl_watchos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtubedl_watchos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C94F38A6FB6145ACDADA8677 /* Pods-youtubedl-watchos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos.release.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos/Pods-youtubedl-watchos.release.xcconfig"; sourceTree = "<group>"; };
 		D72C93CF257D97740056D0BA /* youtubedl-watchos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtubedl-watchos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtubedl-watchos WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C93D9257D97740056D0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -71,25 +87,73 @@
 		D72C93EB257D97770056D0BA /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		D72C93ED257D97780056D0BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D72C93EF257D97780056D0BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D72C9400257D997F0056D0BA /* NowPlayingInterfaceContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingInterfaceContoller.swift; sourceTree = "<group>"; };
+		D72C9409257DA8CD0056D0BA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D72C940F257DAC210056D0BA /* VideoListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListInterfaceController.swift; sourceTree = "<group>"; };
+		D72C9417257DACCE0056D0BA /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		D72C942F257DB42D0056D0BA /* VideoTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableRow.swift; sourceTree = "<group>"; };
+		E983FDECD2F1B6B8912E2CA9 /* Pods-youtubedl-watchos WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit App/Pods-youtubedl-watchos WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		44A5716629B292B9B34290AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77992F8531532D5947DE79D6 /* Pods_youtubedl_watchos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B784D5D7CFC88F2ABC78F9B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				708968BD34B9CC6814BC4F63 /* Pods_youtubedl_watchos_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D72C93DF257D97770056D0BA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19755775A78386E2746D378D /* Pods_youtubedl_watchos_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		441F923D1A9F09019FD8778A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C43B84CADD4AD39CE7AFF2B /* Pods_youtubedl_watchos.framework */,
+				65F3CD2AA70C12AF2151C4C9 /* Pods_youtubedl_watchos_WatchKit_App.framework */,
+				091A924921D9F8850687DF47 /* Pods_youtubedl_watchos_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9AEFEF0C1318B059F0E75B16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				19272E99B57483512C706971 /* Pods-youtubedl-watchos.debug.xcconfig */,
+				C94F38A6FB6145ACDADA8677 /* Pods-youtubedl-watchos.release.xcconfig */,
+				E983FDECD2F1B6B8912E2CA9 /* Pods-youtubedl-watchos WatchKit App.debug.xcconfig */,
+				3B2E2AB7002996FD2B7EA3E3 /* Pods-youtubedl-watchos WatchKit App.release.xcconfig */,
+				2E93476E7FE3B1E19083E8E1 /* Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig */,
+				39579B396DE2E619EACA09CA /* Pods-youtubedl-watchos WatchKit Extension.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D72C93C8257D97740056D0BA = {
 			isa = PBXGroup;
 			children = (
 				D72C93D7257D97740056D0BA /* youtubedl-watchos WatchKit App */,
 				D72C93E6257D97770056D0BA /* youtubedl-watchos WatchKit Extension */,
 				D72C93D0257D97740056D0BA /* Products */,
+				9AEFEF0C1318B059F0E75B16 /* Pods */,
+				441F923D1A9F09019FD8778A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,13 +180,42 @@
 		D72C93E6257D97770056D0BA /* youtubedl-watchos WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				D72C93E7257D97770056D0BA /* InterfaceController.swift */,
 				D72C93E9257D97770056D0BA /* ExtensionDelegate.swift */,
 				D72C93EB257D97770056D0BA /* ComplicationController.swift */,
+				D72C942E257DB3EF0056D0BA /* Views */,
+				D72C940E257DABF60056D0BA /* Scenes */,
+				D72C9408257DA8BB0056D0BA /* Models */,
 				D72C93ED257D97780056D0BA /* Assets.xcassets */,
 				D72C93EF257D97780056D0BA /* Info.plist */,
 			);
 			path = "youtubedl-watchos WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		D72C9408257DA8BB0056D0BA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D72C9409257DA8CD0056D0BA /* Settings.swift */,
+				D72C9417257DACCE0056D0BA /* Video.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D72C940E257DABF60056D0BA /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D72C93E7257D97770056D0BA /* InterfaceController.swift */,
+				D72C940F257DAC210056D0BA /* VideoListInterfaceController.swift */,
+				D72C9400257D997F0056D0BA /* NowPlayingInterfaceContoller.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D72C942E257DB3EF0056D0BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D72C942F257DB42D0056D0BA /* VideoTableRow.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,8 +225,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D72C93FA257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos" */;
 			buildPhases = (
+				5BA892E7DEC4836C88D4E595 /* [CP] Check Pods Manifest.lock */,
 				D72C93CD257D97740056D0BA /* Resources */,
 				D72C93F9257D97780056D0BA /* Embed Watch Content */,
+				44A5716629B292B9B34290AC /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,8 +244,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D72C93F6257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos WatchKit App" */;
 			buildPhases = (
+				7BB185F833E773B46C1CF025 /* [CP] Check Pods Manifest.lock */,
 				D72C93D1257D97740056D0BA /* Resources */,
 				D72C93F5257D97780056D0BA /* Embed App Extensions */,
+				B784D5D7CFC88F2ABC78F9B4 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -166,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D72C93F2257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos WatchKit Extension" */;
 			buildPhases = (
+				4943902D5EBDDE5CACCB80CC /* [CP] Check Pods Manifest.lock */,
 				D72C93DE257D97770056D0BA /* Sources */,
 				D72C93DF257D97770056D0BA /* Frameworks */,
 				D72C93E0257D97770056D0BA /* Resources */,
+				D73E4A6508E03267A4A64BB8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,14 +345,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4943902D5EBDDE5CACCB80CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-youtubedl-watchos WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BA892E7DEC4836C88D4E595 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-youtubedl-watchos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BB185F833E773B46C1CF025 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-youtubedl-watchos WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D73E4A6508E03267A4A64BB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D72C93DE257D97770056D0BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D72C9401257D997F0056D0BA /* NowPlayingInterfaceContoller.swift in Sources */,
+				D72C9410257DAC210056D0BA /* VideoListInterfaceController.swift in Sources */,
 				D72C93EA257D97770056D0BA /* ExtensionDelegate.swift in Sources */,
 				D72C93E8257D97770056D0BA /* InterfaceController.swift in Sources */,
 				D72C93EC257D97770056D0BA /* ComplicationController.swift in Sources */,
+				D72C9430257DB42D0056D0BA /* VideoTableRow.swift in Sources */,
+				D72C9418257DACCE0056D0BA /* Video.swift in Sources */,
+				D72C940A257DA8CD0056D0BA /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +590,7 @@
 		};
 		D72C93F3257D97780056D0BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E93476E7FE3B1E19083E8E1 /* Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -422,6 +613,7 @@
 		};
 		D72C93F4257D97780056D0BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39579B396DE2E619EACA09CA /* Pods-youtubedl-watchos WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -444,6 +636,7 @@
 		};
 		D72C93F7257D97780056D0BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E983FDECD2F1B6B8912E2CA9 /* Pods-youtubedl-watchos WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -464,6 +657,7 @@
 		};
 		D72C93F8257D97780056D0BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B2E2AB7002996FD2B7EA3E3 /* Pods-youtubedl-watchos WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -484,6 +678,7 @@
 		};
 		D72C93FB257D97780056D0BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19272E99B57483512C706971 /* Pods-youtubedl-watchos.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -497,6 +692,7 @@
 		};
 		D72C93FC257D97780056D0BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94F38A6FB6145ACDADA8677 /* Pods-youtubedl-watchos.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
