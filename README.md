@@ -17,4 +17,4 @@ This means replacing:
 4. Install the pods in the youtubedl-watchos folder
 5. Replace all of the signing and team identifiers in XCode
 6. Build and deploy WatchOS app
-7. Hold your breath.
+7. Exhale 😮‍💨
