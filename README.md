@@ -12,8 +12,8 @@ This means replacing:
 # Installation
 
 1. Create your own Youtube API key
-2. Deploy your own youtube-dl python server
-3Use details from steps 1 and 2 to fill out the stubs in `Settings.swift`.
+2. Deploy your own [youtube-dl python server](https://github.com/akissu/youtubedl-watchos-server)
+3. Use details from steps 1 and 2 to fill out the stubs in `Settings.swift`.
 4. Install the pods in the youtubedl-watchos folder
 5. Replace all of the signing and team identifiers in XCode
 6. Build and deploy WatchOS app
