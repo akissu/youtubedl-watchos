@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1277794E59E0F1ED432F893D /* Pods_youtubedl_watchos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEA7B4167A933F812DA7DE06 /* Pods_youtubedl_watchos.framework */; };
 		1BA5D5F56E2E2F73587CDDDC /* Pods_youtubedl_watchos_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B1C67BD29DB1BEABF59684 /* Pods_youtubedl_watchos_WatchKit_Extension.framework */; };
+		891B09D5275D0F8B00696841 /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */; };
 		A9BD5F0CF08BAF8582176816 /* Pods_youtubedl_watchos_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B54E33BE97E2D1420A1E96 /* Pods_youtubedl_watchos_WatchKit_App.framework */; };
 		AA8A948C275BF6B800EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948B275BF6B800EBABC4 /* Alamofire */; };
 		AA8A948E275BF78300EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948D275BF78300EBABC4 /* Alamofire */; };
@@ -75,6 +76,7 @@
 		5A859BEECD6C8ACD218E5E0A /* Pods-youtubedl-watchos WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit App/Pods-youtubedl-watchos WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		5B96F697915C3659984670D1 /* Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		64DDE5FEB3E31355036409B2 /* Pods-youtubedl-watchos WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
 		B9B54E33BE97E2D1420A1E96 /* Pods_youtubedl_watchos_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtubedl_watchos_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB5294196A444A2F19C0823 /* Pods-youtubedl-watchos WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit App/Pods-youtubedl-watchos WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		D1B1C67BD29DB1BEABF59684 /* Pods_youtubedl_watchos_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtubedl_watchos_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,7 +151,6 @@
 				5B96F697915C3659984670D1 /* Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig */,
 				64DDE5FEB3E31355036409B2 /* Pods-youtubedl-watchos WatchKit Extension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,6 +214,7 @@
 				D72C93E7257D97770056D0BA /* InterfaceController.swift */,
 				D72C940F257DAC210056D0BA /* VideoListInterfaceController.swift */,
 				D72C9400257D997F0056D0BA /* NowPlayingInterfaceContoller.swift */,
+				891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -324,7 +326,7 @@
 			);
 			mainGroup = D72C93C8257D97740056D0BA;
 			packageReferences = (
-				AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
+				AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = D72C93D0257D97740056D0BA /* Products */;
 			projectDirPath = "";
@@ -459,6 +461,7 @@
 				D72C9410257DAC210056D0BA /* VideoListInterfaceController.swift in Sources */,
 				D72C93EA257D97770056D0BA /* ExtensionDelegate.swift in Sources */,
 				D72C93E8257D97770056D0BA /* InterfaceController.swift in Sources */,
+				891B09D5275D0F8B00696841 /* SettingsInterfaceController.swift in Sources */,
 				D72C93EC257D97770056D0BA /* ComplicationController.swift in Sources */,
 				D72C9430257DB42D0056D0BA /* VideoTableRow.swift in Sources */,
 				D72C9418257DACCE0056D0BA /* Video.swift in Sources */,
@@ -767,7 +770,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
+		AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -780,17 +783,17 @@
 /* Begin XCSwiftPackageProductDependency section */
 		AA8A948B275BF6B800EBABC4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		AA8A948D275BF78300EBABC4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 		AA8A948F275BF7AC00EBABC4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
+			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */

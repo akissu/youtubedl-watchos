@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch44"/>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -18,9 +18,33 @@
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <segue destination="BVh-TY-jCX" kind="relationship" relationship="nextPage" id="c2R-Wu-lp9"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="92" y="1"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="5UF-dP-8ee">
+            <objects>
+                <controller identifier="SettingsInterfaceController" title="Settings" id="BVh-TY-jCX" customClass="SettingsInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                    <items>
+                        <switch width="1" alignment="left" value="YES" title="Cache" id="Ntz-r1-kFg"/>
+                        <button width="1" alignment="left" title="Delete cache" id="sfx-11-473">
+                            <connections>
+                                <action selector="cacheDeleter" destination="BVh-TY-jCX" id="3Hp-xa-hIR"/>
+                            </connections>
+                        </button>
+                        <switch width="1" alignment="left" value="YES" title="Thumbnail" id="HVk-Ub-TRL"/>
+                    </items>
+                    <connections>
+                        <outlet property="cacheEnabler" destination="Ntz-r1-kFg" id="QQx-jv-7bZ"/>
+                        <outlet property="thumbnailEnabler" destination="HVk-Ub-TRL" id="GdA-2b-s10"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="92" y="345"/>
         </scene>
         <!--VideoListInterfaceController-->
         <scene sceneID="6CP-fK-CVF">
@@ -30,9 +54,11 @@
                         <table alignment="left" id="iwV-NY-kBI">
                             <items>
                                 <tableRow identifier="VideoRow" id="mqx-3d-RrS" customClass="VideoRow" customModule="youtubedl_watchos_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="tYe-qQ-bVm">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="tYe-qQ-bVm">
                                         <items>
-                                            <label alignment="left" text="Label" id="s08-8O-Sw8"/>
+                                            <label alignment="left" text="Label" numberOfLines="2" id="s08-8O-Sw8">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
@@ -47,7 +73,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="60" y="264"/>
+            <point key="canvasLocation" x="320" y="1"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="osD-rO-mxG">
