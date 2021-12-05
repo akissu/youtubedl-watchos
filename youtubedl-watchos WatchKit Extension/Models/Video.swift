@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 import SwiftUI
 import SwiftyJSON
+import SDWebImage
 
 class Video {
     
@@ -54,20 +55,4 @@ class Video {
             completion(videos)
         }
     }
-}
-
-public func loadImage(url:String, forImageView: WKInterfaceImage) {
-// load image
-    let image_url:String = url
-    DispatchQueue.main.async {
-        let url: NSURL = NSURL(string:image_url)!
-        let data: NSData = NSData(contentsOf: url as URL)!
-        let placeholder = UIImage(data: data as Data)!
-
-// update ui
-        DispatchQueue.main.async {
-            forImageView.setImage(placeholder)
-        }
-    }
-
 }
