@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 import SwiftUI
+import SwiftyJSON
 
 class Video {
     
@@ -36,12 +37,13 @@ class Video {
                             
                             let title = item["title"]
                             let vidId = item["id"]
-                            let imgUrlArray: Any? = item["thumbnails"]
+                            let thumbArray = JSON(item["thumbnails"] as Any)
+                            let url = thumbArray[0]["url"].string
                             // cool also btw this is the search results thingy
-                            if title == nil || vidId == nil || imgUrlArray == nil {
+                            if title == nil || vidId == nil || url == nil {
                                 //where data moment
                             } else {
-                                let video = Video(id: vidId as! String, title: title as! String, img: URL(string: "https://data.mothership.tools/mothershiptools-ukprod/wp-content/uploads/2018/06/Screen-Shot-2018-06-14-at-10.26.44-AM.png")!)
+                                let video = Video(id: vidId as! String, title: title as! String, img: URL(string: url ?? "https://i.ytimg.com/vi/e/maxresdefault.jpg")!)
                                 videos.append(video)
                             }
                         }

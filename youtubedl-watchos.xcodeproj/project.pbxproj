@@ -17,6 +17,9 @@
 		AA8A948C275BF6B800EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948B275BF6B800EBABC4 /* Alamofire */; };
 		AA8A948E275BF78300EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948D275BF78300EBABC4 /* Alamofire */; };
 		AA8A9490275BF7AC00EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948F275BF7AC00EBABC4 /* Alamofire */; };
+		AAD7F128275D5D4B00D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F127275D5D4B00D4A882 /* SwiftyJSON */; };
+		AAD7F12A275D5D5D00D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F129275D5D5D00D4A882 /* SwiftyJSON */; };
+		AAD7F12C275D5D6600D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F12B275D5D6600D4A882 /* SwiftyJSON */; };
 		D72C93D4257D97740056D0BA /* youtubedl-watchos WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D72C93DA257D97740056D0BA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C93D8257D97740056D0BA /* Interface.storyboard */; };
 		D72C93DC257D97770056D0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72C93DB257D97770056D0BA /* Assets.xcassets */; };
@@ -110,6 +113,7 @@
 			files = (
 				890FEA34275D579A00B573B8 /* SDWebImage in Frameworks */,
 				AA8A948C275BF6B800EBABC4 /* Alamofire in Frameworks */,
+				AAD7F128275D5D4B00D4A882 /* SwiftyJSON in Frameworks */,
 				1277794E59E0F1ED432F893D /* Pods_youtubedl_watchos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,6 +124,7 @@
 			files = (
 				890FEA36275D57A500B573B8 /* SDWebImage in Frameworks */,
 				AA8A948E275BF78300EBABC4 /* Alamofire in Frameworks */,
+				AAD7F12A275D5D5D00D4A882 /* SwiftyJSON in Frameworks */,
 				A9BD5F0CF08BAF8582176816 /* Pods_youtubedl_watchos_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +135,7 @@
 			files = (
 				890FEA38275D57AA00B573B8 /* SDWebImage in Frameworks */,
 				AA8A9490275BF7AC00EBABC4 /* Alamofire in Frameworks */,
+				AAD7F12C275D5D6600D4A882 /* SwiftyJSON in Frameworks */,
 				1BA5D5F56E2E2F73587CDDDC /* Pods_youtubedl_watchos_WatchKit_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +260,7 @@
 			packageProductDependencies = (
 				AA8A948B275BF6B800EBABC4 /* Alamofire */,
 				890FEA33275D579A00B573B8 /* SDWebImage */,
+				AAD7F127275D5D4B00D4A882 /* SwiftyJSON */,
 			);
 			productName = "youtubedl-watchos";
 			productReference = D72C93CF257D97740056D0BA /* youtubedl-watchos.app */;
@@ -277,6 +284,7 @@
 			packageProductDependencies = (
 				AA8A948D275BF78300EBABC4 /* Alamofire */,
 				890FEA35275D57A500B573B8 /* SDWebImage */,
+				AAD7F129275D5D5D00D4A882 /* SwiftyJSON */,
 			);
 			productName = "youtubedl-watchos WatchKit App";
 			productReference = D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */;
@@ -300,6 +308,7 @@
 			packageProductDependencies = (
 				AA8A948F275BF7AC00EBABC4 /* Alamofire */,
 				890FEA37275D57AA00B573B8 /* SDWebImage */,
+				AAD7F12B275D5D6600D4A882 /* SwiftyJSON */,
 			);
 			productName = "youtubedl-watchos WatchKit Extension";
 			productReference = D72C93E2257D97770056D0BA /* youtubedl-watchos WatchKit Extension.appex */;
@@ -337,6 +346,7 @@
 			packageReferences = (
 				AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				890FEA32275D579A00B573B8 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = D72C93D0257D97740056D0BA /* Products */;
 			projectDirPath = "";
@@ -796,6 +806,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -828,6 +846,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		AAD7F127275D5D4B00D4A882 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		AAD7F129275D5D5D00D4A882 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		AAD7F12B275D5D6600D4A882 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
