@@ -1,4 +1,4 @@
-youtube-watchos is a standalone WatchOS youtube player utilizing [Download API](https://github.com/llsc12/download-api) for search data and video streaming. The app is based off of Ziph0n's original Wristplayer, but aims to achieve the following:
+youtube-watchos is a standalone WatchOS youtube player utilizing [Download API](https://github.com/llsc12/download-api) for search data and video streaming. The app is based off of [Ziph0n's original Wristplayer](https://github.com/Ziph0n/WristPlayer) and is a fork of [akissu's youtubedl-watchos](https://github.com/akissu/youtubedl-watchos), it aims to achieve the following:
 
 1. Fully standalone usage of the app relying on Download API to not use the official YouTube API and prevent ratelimits
 
