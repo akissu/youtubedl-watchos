@@ -12,10 +12,12 @@ class Video {
     
     var id: String
     var title: String
+    var img: String
     
-    public init(id: String, title: String) {
+    public init(id: String, title: String, img: String) {
         self.id = id
         self.title = title
+        self.img = img
     }
     
     class func getVideos(keyword: String, completion: @escaping ([Video]) -> Void) {
@@ -33,13 +35,12 @@ class Video {
                             
                             let title = item["title"]
                             let vidId = item["id"]
-
+                            let imgUrlArray: Any? = item["thumbnails"]
                             // cool also btw this is the search results thingy
-                            if title == nil || vidId == nil {
+                            if title == nil || vidId == nil || imgUrlArray == nil {
                                 //where data moment
-                                print("idk")
                             } else {
-                                let video = Video(id: vidId as! String, title: title as! String)
+                                let video = Video(id: vidId as! String, title: title as! String, img: "")
                                 videos.append(video)
                             }
                         }

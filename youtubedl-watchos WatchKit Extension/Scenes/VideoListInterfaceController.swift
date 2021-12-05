@@ -14,6 +14,7 @@ class VideoListInterfaceController: WKInterfaceController {
     
     @IBOutlet var videoTableRow: WKInterfaceTable!
         
+    @IBOutlet weak var img: WKInterfaceImage!
     var videos: [Video]!
     
     override func awake(withContext context: Any?) {
@@ -42,7 +43,7 @@ class VideoListInterfaceController: WKInterfaceController {
                 }
             row.titleLabel.setText(videos[i].title)
             row.videoId = videos[i].id
-        
+            
         }
     }
         
