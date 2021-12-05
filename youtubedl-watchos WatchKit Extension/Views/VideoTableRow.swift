@@ -11,6 +11,6 @@ import WatchKit
 class VideoRow: NSObject {
 
     @IBOutlet var titleLabel: WKInterfaceLabel!
-    
+    @IBOutlet var thumbImg: WKInterfaceImage!
     var videoId: String!
 }
