@@ -9,7 +9,6 @@ import Foundation
 import WatchKit
 import SDWebImage
 
-
 class VideoListInterfaceController: WKInterfaceController {
     
     @IBOutlet var videoTableRow: WKInterfaceTable!
@@ -45,7 +44,6 @@ class VideoListInterfaceController: WKInterfaceController {
             row.thumbImg.sd_setImage(with: videos[i].img)
             
             // image url available at videos[i].img
-            
             
         }
     }
