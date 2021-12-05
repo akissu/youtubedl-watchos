@@ -28,13 +28,13 @@ class InterfaceController: WKInterfaceController {
         var keywordsHistory = UserDefaults.standard.stringArray(forKey: preferencesKeys.keywordsHistory) ?? [String]()
         var lastTwentyKeywordsHistory = Array(keywordsHistory.suffix(20))
         if lastTwentyKeywordsHistory.count == 0 {
-            lastTwentyKeywordsHistory.append("SomeOrdinaryGamers") // to get the option to scribbl on first launch
+            lastTwentyKeywordsHistory.append("Ki Jor Gariban Da") // to get the option to scribbl on first launch
         }
         
         self.presentTextInputController(withSuggestions: lastTwentyKeywordsHistory.reversed(), allowedInputMode: .plain) { (keywords) in
             if let keyword = keywords as? [String] {
                 if keyword.count > 0 {
-                    if let index = keywordsHistory.index(of: keyword[0]) {
+                    if let index = keywordsHistory.firstIndex(of: keyword[0]) {
                         keywordsHistory.remove(at: index)
                     }
                     keywordsHistory.append(keyword[0])

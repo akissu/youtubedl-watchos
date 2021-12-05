@@ -9,8 +9,8 @@ import Foundation
 import WatchKit
 import Alamofire
 
-var youtubedlServerURLBase = "http://" + Constants.youtubedlServerIP + ":" + Constants.youtubedlServerPort
-var youtubedlServerURLDL = youtubedlServerURLBase + "/dl"
+var youtubedlServerURLBase = "https://" + Constants.downloadSrvInstance
+var youtubedlServerURLDL = youtubedlServerURLBase + "/api/v2/download?url=https://youtu.be"
 
 class NowPlayingInterfaceController: WKInterfaceController {
 
@@ -33,35 +33,27 @@ class NowPlayingInterfaceController: WKInterfaceController {
             self.titleLabel.setText("Nothing is playing")
         }
         
-        self.statusLabel.setText("Searching video...")
+    
+
+        let vidpath = youtubedlServerURLDL+"/"+self.video.id
+        self.statusLabel.setText("Waiting for server...")
+
+        let destination: DownloadRequest.Destination = { _, _ in
+            let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("video.mp4")
+
+            return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
+        }
         
-        AF.request(youtubedlServerURLBase + "/" + self.video.id).responseJSON { response in
-            switch response.result {
-            case .success(let json):
-                    let response = json as! Dictionary<String, Any>
-                    let vidpath = response["path"] as! String
-                    self.statusLabel.setText("Loading video... 0%")
-
-                    let destination: DownloadRequest.Destination = { _, _ in
-                        let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("video.mp4")
-
-                        return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
-                    }
-                    
-                    AF.download(youtubedlServerURLDL + "/" + self.video.id, to: destination).response { response in
-                        if response.value != nil {
-                            self.movie.setMovieURL(response.value!!)
-                            self.statusLabel.setText("Tap to play!")
-                        }
-                    }
-                    .downloadProgress(closure: { (progress) in
-                        let percent = Int((round(100 * progress.fractionCompleted) / 100) * 100)
-                        self.statusLabel.setText("Loading video... \(percent)%")
-                    })
-            case .failure(let error):
-                print(error)
+        AF.download(vidpath, to: destination).response { response in
+            if response.value != nil {
+                
+                self.movie.setMovieURL(response.value!!)
+                self.statusLabel.setText("Ready.")
             }
         }
+        .downloadProgress(closure: { (progress) in
+            let percent = Int((round(100 * progress.fractionCompleted) / 100) * 100)
+            self.statusLabel.setText("Downloading... \(percent)%")
+        })
     }
 }
-

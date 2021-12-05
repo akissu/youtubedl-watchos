@@ -11,7 +11,5 @@ struct preferencesKeys {
 }
 
 struct Constants {
-    static let youtubeAPIKey = "xxx-yyy"
-    static let youtubedlServerIP = "xxxx.xxxx.xxxx.xxxx"
-    static let youtubedlServerPort = "5000"
+    static let downloadSrvInstance = "llsc12.ml"
 }

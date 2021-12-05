@@ -25,6 +25,5 @@ target 'youtubedl-watchos WatchKit Extension' do
   # Pods for WatchTube for Apple Watch Extension
 
   pod 'GoogleAPIClientForREST/YouTube'
-  pod 'Alamofire'
 
 end

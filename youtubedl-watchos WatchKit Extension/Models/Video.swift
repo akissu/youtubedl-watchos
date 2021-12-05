@@ -19,7 +19,7 @@ class Video {
     }
     
     class func getVideos(keyword: String, completion: @escaping ([Video]) -> Void) {
-        AF.request("https://www.googleapis.com/youtube/v3/search?part=snippet&q=\(keyword.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")&maxResults=20&order=viewCount&key=" + Constants.youtubeAPIKey).responseJSON { response in
+        AF.request("https://"+Constants.downloadSrvInstance+"/api/v1/search?search_query=\(keyword.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")&limit=20").responseJSON { response in
             
             var videos = [Video]()
             
@@ -27,21 +27,23 @@ class Video {
             case .success(let json):
                     let response = json as! Dictionary<String, Any>
                     let keyExists = response["items"]
-                    let errorExists = response["error"]
                     if keyExists != nil{
                         let items = response["items"] as! [[String: Any]]
                         for (_, item) in items.enumerated() {
-                            let videoDetails = item
-                            let snippet = videoDetails["snippet"] as! Dictionary<String, Any>
-                            let title = snippet["title"] as! String
                             
-                            let id = videoDetails["id"] as! Dictionary<String, Any>
+                            let title = item["title"]
                             
-                            guard let videoId = id["videoId"] as? String else {
-                                continue
+                            if title == nil {
+                                break
                             }
                             
-                            let video = Video(id: videoId, title: title)
+                            let vidId = item["id"]
+                            
+                            if vidId == nil {
+                                break
+                            }
+                            // cool also btw this is the search results thingy
+                            let video = Video(id: vidId as! String, title: title as! String)
                             videos.append(video)
                         }
                     }

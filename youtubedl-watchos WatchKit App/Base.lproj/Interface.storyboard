@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17506" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38"/>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19455" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19454"/>
     </dependencies>
     <scenes>
         <!--Home-->
@@ -11,7 +12,7 @@
             <objects>
                 <controller title="Home" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="youtubedl_watchos_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Button" id="Uye-xf-Sds">
+                        <button width="1" alignment="left" title="Search" id="Uye-xf-Sds">
                             <connections>
                                 <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
                             </connections>
@@ -54,7 +55,7 @@
                 <controller identifier="NowPlayingInterfaceController" title="Now Playing" id="IGU-mI-QIU" customClass="NowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Label" id="MiS-2n-4v5"/>
-                        <movie width="1" height="100" alignment="left" id="T1W-VJ-tpl"/>
+                        <movie width="134" height="100" alignment="left" id="T1W-VJ-tpl"/>
                         <label alignment="left" text="Label" id="mYm-eV-xkZ"/>
                     </items>
                     <connections>
