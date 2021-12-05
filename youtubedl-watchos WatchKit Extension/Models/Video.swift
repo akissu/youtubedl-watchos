@@ -40,7 +40,7 @@ class Video {
                             if title == nil || vidId == nil || imgUrlArray == nil {
                                 //where data moment
                             } else {
-                                let video = Video(id: vidId as! String, title: title as! String, img: "")
+                                let video = Video(id: vidId as! String, title: title as! String, img: "https://i.ytimg.com/vi/eggesger/maxresdefault.jpg")
                                 videos.append(video)
                             }
                         }

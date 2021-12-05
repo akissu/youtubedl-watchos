@@ -43,6 +43,8 @@ class VideoListInterfaceController: WKInterfaceController {
                 }
             row.titleLabel.setText(videos[i].title)
             row.videoId = videos[i].id
+            // image url available at videos[i].img
+            
             
         }
     }
