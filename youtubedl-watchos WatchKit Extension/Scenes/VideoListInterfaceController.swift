@@ -7,14 +7,13 @@
 
 import Foundation
 import WatchKit
-
+import SDWebImage
 
 
 class VideoListInterfaceController: WKInterfaceController {
     
     @IBOutlet var videoTableRow: WKInterfaceTable!
-        
-    @IBOutlet weak var img: WKInterfaceImage!
+    
     var videos: [Video]!
     
     override func awake(withContext context: Any?) {
@@ -43,6 +42,8 @@ class VideoListInterfaceController: WKInterfaceController {
                 }
             row.titleLabel.setText(videos[i].title)
             row.videoId = videos[i].id
+            row.thumbImg.sd_setImage(with: videos[i].img)
+            
             // image url available at videos[i].img
             
             

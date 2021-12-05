@@ -7,14 +7,15 @@
 
 import Foundation
 import Alamofire
+import SwiftUI
 
 class Video {
     
     var id: String
     var title: String
-    var img: String
+    var img = URL(string: "")
     
-    public init(id: String, title: String, img: String) {
+    public init(id: String, title: String, img: URL) {
         self.id = id
         self.title = title
         self.img = img
@@ -40,7 +41,7 @@ class Video {
                             if title == nil || vidId == nil || imgUrlArray == nil {
                                 //where data moment
                             } else {
-                                let video = Video(id: vidId as! String, title: title as! String, img: "https://i.ytimg.com/vi/eggesger/maxresdefault.jpg")
+                                let video = Video(id: vidId as! String, title: title as! String, img: URL(string: "https://data.mothership.tools/mothershiptools-ukprod/wp-content/uploads/2018/06/Screen-Shot-2018-06-14-at-10.26.44-AM.png")!)
                                 videos.append(video)
                             }
                         }
@@ -51,4 +52,20 @@ class Video {
             completion(videos)
         }
     }
+}
+
+public func loadImage(url:String, forImageView: WKInterfaceImage) {
+// load image
+    let image_url:String = url
+    DispatchQueue.main.async {
+        let url: NSURL = NSURL(string:image_url)!
+        let data: NSData = NSData(contentsOf: url as URL)!
+        let placeholder = UIImage(data: data as Data)!
+
+// update ui
+        DispatchQueue.main.async {
+            forImageView.setImage(placeholder)
+        }
+    }
+
 }
