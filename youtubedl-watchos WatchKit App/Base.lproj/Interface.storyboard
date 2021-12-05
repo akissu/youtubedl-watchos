@@ -77,7 +77,7 @@
                                 <tableRow identifier="VideoRow" id="mqx-3d-RrS" customClass="VideoRow" customModule="youtubedl_watchos_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="tYe-qQ-bVm">
                                         <items>
-                                            <imageView width="40" height="40" alignment="left" verticalAlignment="center" id="C3B-Bo-uae"/>
+                                            <imageView width="45" height="35" alignment="left" verticalAlignment="center" id="C3B-Bo-uae"/>
                                             <label alignment="left" text="Label" numberOfLines="2" id="s08-8O-Sw8">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                             </label>
