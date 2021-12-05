@@ -1,0 +1,6 @@
+framework module Pods_youtubedl_watchos_WatchKit_Extension {
+  umbrella header "Pods-youtubedl-watchos WatchKit Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}
