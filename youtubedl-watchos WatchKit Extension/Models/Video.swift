@@ -19,7 +19,7 @@ class Video {
     }
     
     class func getVideos(keyword: String, completion: @escaping ([Video]) -> Void) {
-        AF.request("https://"+Constants.downloadSrvInstance+"/api/v1/search?search_query=\(keyword.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")&limit=20").responseJSON { response in
+        AF.request("https://"+Constants.downloadSrvInstance+"/api/v1/search?search_query=\(keyword.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")&limit=30").responseJSON { response in
             
             var videos = [Video]()
             
@@ -32,19 +32,16 @@ class Video {
                         for (_, item) in items.enumerated() {
                             
                             let title = item["title"]
-                            
-                            if title == nil {
-                                break
-                            }
-                            
                             let vidId = item["id"]
-                            
-                            if vidId == nil {
-                                break
-                            }
+
                             // cool also btw this is the search results thingy
-                            let video = Video(id: vidId as! String, title: title as! String)
-                            videos.append(video)
+                            if title == nil || vidId == nil {
+                                //where data moment
+                                print("idk")
+                            } else {
+                                let video = Video(id: vidId as! String, title: title as! String)
+                                videos.append(video)
+                            }
                         }
                     }
             case .failure(let error):
