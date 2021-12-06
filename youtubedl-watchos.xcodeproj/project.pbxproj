@@ -7,18 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FF3334C529CFD12CF19E58A /* Pods_youtubedl_watchos_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBF38F9B5CD36D7C3E5D4DA9 /* Pods_youtubedl_watchos_WatchKit_App.framework */; };
-		5016CCB73643E1C8FC3AE3BD /* Pods_youtubedl_watchos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4FFD75B072DE1A142EA2F4 /* Pods_youtubedl_watchos.framework */; };
-		890FEA34275D579A00B573B8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 890FEA33275D579A00B573B8 /* SwiftPackageProductDependency */; };
-		890FEA36275D57A500B573B8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 890FEA35275D57A500B573B8 /* SwiftPackageProductDependency */; };
-		890FEA38275D57AA00B573B8 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 890FEA37275D57AA00B573B8 /* SwiftPackageProductDependency */; };
+		890FEA34275D579A00B573B8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 890FEA33275D579A00B573B8 /* SDWebImage */; };
+		890FEA36275D57A500B573B8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 890FEA35275D57A500B573B8 /* SDWebImage */; };
+		890FEA38275D57AA00B573B8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 890FEA37275D57AA00B573B8 /* SDWebImage */; };
 		891B09D5275D0F8B00696841 /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */; };
-		AA8A948C275BF6B800EBABC4 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948B275BF6B800EBABC4 /* SwiftPackageProductDependency */; };
-		AA8A948E275BF78300EBABC4 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948D275BF78300EBABC4 /* SwiftPackageProductDependency */; };
-		AA8A9490275BF7AC00EBABC4 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948F275BF7AC00EBABC4 /* SwiftPackageProductDependency */; };
-		AAD7F128275D5D4B00D4A882 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F127275D5D4B00D4A882 /* SwiftPackageProductDependency */; };
-		AAD7F12A275D5D5D00D4A882 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F129275D5D5D00D4A882 /* SwiftPackageProductDependency */; };
-		AAD7F12C275D5D6600D4A882 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F12B275D5D6600D4A882 /* SwiftPackageProductDependency */; };
+		AA8A948C275BF6B800EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948B275BF6B800EBABC4 /* Alamofire */; };
+		AA8A948E275BF78300EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948D275BF78300EBABC4 /* Alamofire */; };
+		AA8A9490275BF7AC00EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948F275BF7AC00EBABC4 /* Alamofire */; };
+		AAD7F128275D5D4B00D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F127275D5D4B00D4A882 /* SwiftyJSON */; };
+		AAD7F12A275D5D5D00D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F129275D5D5D00D4A882 /* SwiftyJSON */; };
+		AAD7F12C275D5D6600D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F12B275D5D6600D4A882 /* SwiftyJSON */; };
 		D72C93D4257D97740056D0BA /* youtubedl-watchos WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D72C93DA257D97740056D0BA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C93D8257D97740056D0BA /* Interface.storyboard */; };
 		D72C93DC257D97770056D0BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72C93DB257D97770056D0BA /* Assets.xcassets */; };
@@ -32,7 +30,6 @@
 		D72C9410257DAC210056D0BA /* VideoListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C940F257DAC210056D0BA /* VideoListInterfaceController.swift */; };
 		D72C9418257DACCE0056D0BA /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C9417257DACCE0056D0BA /* Video.swift */; };
 		D72C9430257DB42D0056D0BA /* VideoTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72C942F257DB42D0056D0BA /* VideoTableRow.swift */; };
-		FFC372B9BC31609B1D00F74B /* Pods_youtubedl_watchos_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB4DEEB07F2BE8894ECEC41 /* Pods_youtubedl_watchos_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,14 +75,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		076261F9EB7A26741DFA68AF /* Pods-youtubedl-watchos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos.release.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos/Pods-youtubedl-watchos.release.xcconfig"; sourceTree = "<group>"; };
-		2EB4DEEB07F2BE8894ECEC41 /* Pods_youtubedl_watchos_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtubedl_watchos_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6DE8AAE233758B940241722C /* Pods-youtubedl-watchos WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
-		770A7886421B9655F88729FF /* Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		7A315AE38F9FFC47C8092AE2 /* Pods-youtubedl-watchos WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit App/Pods-youtubedl-watchos WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
-		8B4FFD75B072DE1A142EA2F4 /* Pods_youtubedl_watchos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtubedl_watchos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C73F7324D9C5F725BA73C43E /* Pods-youtubedl-watchos WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos WatchKit App/Pods-youtubedl-watchos WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		D72C93CF257D97740056D0BA /* youtubedl-watchos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtubedl-watchos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtubedl-watchos WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C93D9257D97740056D0BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -102,8 +92,6 @@
 		D72C940F257DAC210056D0BA /* VideoListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListInterfaceController.swift; sourceTree = "<group>"; };
 		D72C9417257DACCE0056D0BA /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		D72C942F257DB42D0056D0BA /* VideoTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableRow.swift; sourceTree = "<group>"; };
-		DBF38F9B5CD36D7C3E5D4DA9 /* Pods_youtubedl_watchos_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_youtubedl_watchos_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F761C1C76CDD73792A2277CD /* Pods-youtubedl-watchos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-youtubedl-watchos.debug.xcconfig"; path = "Target Support Files/Pods-youtubedl-watchos/Pods-youtubedl-watchos.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +99,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890FEA34275D579A00B573B8 /* BuildFile in Frameworks */,
-				AA8A948C275BF6B800EBABC4 /* BuildFile in Frameworks */,
-				AAD7F128275D5D4B00D4A882 /* BuildFile in Frameworks */,
-				5016CCB73643E1C8FC3AE3BD /* Pods_youtubedl_watchos.framework in Frameworks */,
+				890FEA34275D579A00B573B8 /* SDWebImage in Frameworks */,
+				AA8A948C275BF6B800EBABC4 /* Alamofire in Frameworks */,
+				AAD7F128275D5D4B00D4A882 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,10 +109,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890FEA36275D57A500B573B8 /* BuildFile in Frameworks */,
-				AA8A948E275BF78300EBABC4 /* BuildFile in Frameworks */,
-				AAD7F12A275D5D5D00D4A882 /* BuildFile in Frameworks */,
-				2FF3334C529CFD12CF19E58A /* Pods_youtubedl_watchos_WatchKit_App.framework in Frameworks */,
+				890FEA36275D57A500B573B8 /* SDWebImage in Frameworks */,
+				AA8A948E275BF78300EBABC4 /* Alamofire in Frameworks */,
+				AAD7F12A275D5D5D00D4A882 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,34 +119,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				890FEA38275D57AA00B573B8 /* BuildFile in Frameworks */,
-				AA8A9490275BF7AC00EBABC4 /* BuildFile in Frameworks */,
-				AAD7F12C275D5D6600D4A882 /* BuildFile in Frameworks */,
-				FFC372B9BC31609B1D00F74B /* Pods_youtubedl_watchos_WatchKit_Extension.framework in Frameworks */,
+				890FEA38275D57AA00B573B8 /* SDWebImage in Frameworks */,
+				AA8A9490275BF7AC00EBABC4 /* Alamofire in Frameworks */,
+				AAD7F12C275D5D6600D4A882 /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CBA340CF00A3C0A0F03EEE5C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8B4FFD75B072DE1A142EA2F4 /* Pods_youtubedl_watchos.framework */,
-				DBF38F9B5CD36D7C3E5D4DA9 /* Pods_youtubedl_watchos_WatchKit_App.framework */,
-				2EB4DEEB07F2BE8894ECEC41 /* Pods_youtubedl_watchos_WatchKit_Extension.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		D72C93C8257D97740056D0BA = {
 			isa = PBXGroup;
 			children = (
 				D72C93D7257D97740056D0BA /* youtubedl-watchos WatchKit App */,
 				D72C93E6257D97770056D0BA /* youtubedl-watchos WatchKit Extension */,
 				D72C93D0257D97740056D0BA /* Products */,
-				F25B4F1BB45B85022B23AB35 /* Pods */,
-				CBA340CF00A3C0A0F03EEE5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -226,19 +199,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F25B4F1BB45B85022B23AB35 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F761C1C76CDD73792A2277CD /* Pods-youtubedl-watchos.debug.xcconfig */,
-				076261F9EB7A26741DFA68AF /* Pods-youtubedl-watchos.release.xcconfig */,
-				C73F7324D9C5F725BA73C43E /* Pods-youtubedl-watchos WatchKit App.debug.xcconfig */,
-				7A315AE38F9FFC47C8092AE2 /* Pods-youtubedl-watchos WatchKit App.release.xcconfig */,
-				770A7886421B9655F88729FF /* Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig */,
-				6DE8AAE233758B940241722C /* Pods-youtubedl-watchos WatchKit Extension.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,7 +206,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D72C93FA257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos" */;
 			buildPhases = (
-				93D40F8E3BA3D863C2CBD317 /* [CP] Check Pods Manifest.lock */,
 				D72C93CD257D97740056D0BA /* Resources */,
 				D72C93F9257D97780056D0BA /* Embed Watch Content */,
 				44A5716629B292B9B34290AC /* Frameworks */,
@@ -258,9 +217,9 @@
 			);
 			name = "youtubedl-watchos";
 			packageProductDependencies = (
-				AA8A948B275BF6B800EBABC4 /* SwiftPackageProductDependency */,
-				890FEA33275D579A00B573B8 /* SwiftPackageProductDependency */,
-				AAD7F127275D5D4B00D4A882 /* SwiftPackageProductDependency */,
+				AA8A948B275BF6B800EBABC4 /* Alamofire */,
+				890FEA33275D579A00B573B8 /* SDWebImage */,
+				AAD7F127275D5D4B00D4A882 /* SwiftyJSON */,
 			);
 			productName = "youtubedl-watchos";
 			productReference = D72C93CF257D97740056D0BA /* youtubedl-watchos.app */;
@@ -270,7 +229,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D72C93F6257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos WatchKit App" */;
 			buildPhases = (
-				AD3C209EE4DCB8C75E57E5DE /* [CP] Check Pods Manifest.lock */,
 				D72C93D1257D97740056D0BA /* Resources */,
 				D72C93F5257D97780056D0BA /* Embed App Extensions */,
 				B784D5D7CFC88F2ABC78F9B4 /* Frameworks */,
@@ -282,9 +240,9 @@
 			);
 			name = "youtubedl-watchos WatchKit App";
 			packageProductDependencies = (
-				AA8A948D275BF78300EBABC4 /* SwiftPackageProductDependency */,
-				890FEA35275D57A500B573B8 /* SwiftPackageProductDependency */,
-				AAD7F129275D5D5D00D4A882 /* SwiftPackageProductDependency */,
+				AA8A948D275BF78300EBABC4 /* Alamofire */,
+				890FEA35275D57A500B573B8 /* SDWebImage */,
+				AAD7F129275D5D5D00D4A882 /* SwiftyJSON */,
 			);
 			productName = "youtubedl-watchos WatchKit App";
 			productReference = D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */;
@@ -294,11 +252,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D72C93F2257D97780056D0BA /* Build configuration list for PBXNativeTarget "youtubedl-watchos WatchKit Extension" */;
 			buildPhases = (
-				0351DD727F7BA8F24096ABFB /* [CP] Check Pods Manifest.lock */,
 				D72C93DE257D97770056D0BA /* Sources */,
 				D72C93DF257D97770056D0BA /* Frameworks */,
 				D72C93E0257D97770056D0BA /* Resources */,
-				755669502A88CCBB43814847 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,9 +262,9 @@
 			);
 			name = "youtubedl-watchos WatchKit Extension";
 			packageProductDependencies = (
-				AA8A948F275BF7AC00EBABC4 /* SwiftPackageProductDependency */,
-				890FEA37275D57AA00B573B8 /* SwiftPackageProductDependency */,
-				AAD7F12B275D5D6600D4A882 /* SwiftPackageProductDependency */,
+				AA8A948F275BF7AC00EBABC4 /* Alamofire */,
+				890FEA37275D57AA00B573B8 /* SDWebImage */,
+				AAD7F12B275D5D6600D4A882 /* SwiftyJSON */,
 			);
 			productName = "youtubedl-watchos WatchKit Extension";
 			productReference = D72C93E2257D97770056D0BA /* youtubedl-watchos WatchKit Extension.appex */;
@@ -344,9 +300,9 @@
 			);
 			mainGroup = D72C93C8257D97740056D0BA;
 			packageReferences = (
-				AA8A948A275BF6B800EBABC4 /* RemoteSwiftPackageReference */,
-				890FEA32275D579A00B573B8 /* RemoteSwiftPackageReference */,
-				AAD7F126275D5D4B00D4A882 /* RemoteSwiftPackageReference */,
+				AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				890FEA32275D579A00B573B8 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = D72C93D0257D97740056D0BA /* Products */;
 			projectDirPath = "";
@@ -385,92 +341,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0351DD727F7BA8F24096ABFB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-youtubedl-watchos WatchKit Extension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		755669502A88CCBB43814847 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-youtubedl-watchos WatchKit Extension/Pods-youtubedl-watchos WatchKit Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		93D40F8E3BA3D863C2CBD317 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-youtubedl-watchos-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AD3C209EE4DCB8C75E57E5DE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-youtubedl-watchos WatchKit App-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D72C93DE257D97770056D0BA /* Sources */ = {
@@ -634,7 +504,6 @@
 		};
 		D72C93F3257D97780056D0BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 770A7886421B9655F88729FF /* Pods-youtubedl-watchos WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -657,7 +526,6 @@
 		};
 		D72C93F4257D97780056D0BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6DE8AAE233758B940241722C /* Pods-youtubedl-watchos WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -680,7 +548,6 @@
 		};
 		D72C93F7257D97780056D0BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C73F7324D9C5F725BA73C43E /* Pods-youtubedl-watchos WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -701,7 +568,6 @@
 		};
 		D72C93F8257D97780056D0BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A315AE38F9FFC47C8092AE2 /* Pods-youtubedl-watchos WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -722,7 +588,6 @@
 		};
 		D72C93FB257D97780056D0BA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F761C1C76CDD73792A2277CD /* Pods-youtubedl-watchos.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -736,7 +601,6 @@
 		};
 		D72C93FC257D97780056D0BA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 076261F9EB7A26741DFA68AF /* Pods-youtubedl-watchos.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -790,7 +654,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		890FEA32275D579A00B573B8 /* RemoteSwiftPackageReference */ = {
+		890FEA32275D579A00B573B8 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -798,7 +662,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		AA8A948A275BF6B800EBABC4 /* RemoteSwiftPackageReference */ = {
+		AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -806,7 +670,7 @@
 				minimumVersion = 5.0.0;
 			};
 		};
-		AAD7F126275D5D4B00D4A882 /* RemoteSwiftPackageReference */ = {
+		AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
 			requirement = {
@@ -817,49 +681,49 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		890FEA33275D579A00B573B8 /* SwiftPackageProductDependency */ = {
+		890FEA33275D579A00B573B8 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 890FEA32275D579A00B573B8 /* RemoteSwiftPackageReference */;
+			package = 890FEA32275D579A00B573B8 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		890FEA35275D57A500B573B8 /* SwiftPackageProductDependency */ = {
+		890FEA35275D57A500B573B8 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 890FEA32275D579A00B573B8 /* RemoteSwiftPackageReference */;
+			package = 890FEA32275D579A00B573B8 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		890FEA37275D57AA00B573B8 /* SwiftPackageProductDependency */ = {
+		890FEA37275D57AA00B573B8 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 890FEA32275D579A00B573B8 /* RemoteSwiftPackageReference */;
+			package = 890FEA32275D579A00B573B8 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		AA8A948B275BF6B800EBABC4 /* SwiftPackageProductDependency */ = {
+		AA8A948B275BF6B800EBABC4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AA8A948A275BF6B800EBABC4 /* RemoteSwiftPackageReference */;
+			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		AA8A948D275BF78300EBABC4 /* SwiftPackageProductDependency */ = {
+		AA8A948D275BF78300EBABC4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AA8A948A275BF6B800EBABC4 /* RemoteSwiftPackageReference */;
+			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		AA8A948F275BF7AC00EBABC4 /* SwiftPackageProductDependency */ = {
+		AA8A948F275BF7AC00EBABC4 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AA8A948A275BF6B800EBABC4 /* RemoteSwiftPackageReference */;
+			package = AA8A948A275BF6B800EBABC4 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		AAD7F127275D5D4B00D4A882 /* SwiftPackageProductDependency */ = {
+		AAD7F127275D5D4B00D4A882 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AAD7F126275D5D4B00D4A882 /* RemoteSwiftPackageReference */;
+			package = AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		AAD7F129275D5D5D00D4A882 /* SwiftPackageProductDependency */ = {
+		AAD7F129275D5D5D00D4A882 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AAD7F126275D5D4B00D4A882 /* RemoteSwiftPackageReference */;
+			package = AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
-		AAD7F12B275D5D6600D4A882 /* SwiftPackageProductDependency */ = {
+		AAD7F12B275D5D6600D4A882 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AAD7F126275D5D4B00D4A882 /* RemoteSwiftPackageReference */;
+			package = AAD7F126275D5D4B00D4A882 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */

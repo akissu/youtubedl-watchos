@@ -2,7 +2,7 @@
 //  SettingsInterfaceController.swift
 //  youtubedl-watchos WatchKit Extension
 //
-//  Created by Hugo Mason on 05/12/2021.
+//  Created by Hugo on 05/12/2021.
 //
 
 import WatchKit
