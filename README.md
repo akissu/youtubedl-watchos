@@ -8,7 +8,6 @@ youtube-watchos is a standalone WatchOS youtube player utilizing [Download API](
 
 1. OPTIONAL: Setup your own [Download API](https://github.com/llsc12/download-api) instance
 2. Use your instance's address from step 1 to fill in `Settings.swift` or use llsc12.ml as default.
-3. Install the pods in the youtubedl-watchos folder with `pod install`
-4. Replace all of the signing and team identifiers in XCode
-5. Build and deploy WatchOS app
-6. Exhale 😮‍💨
+3. Replace all of the signing and team identifiers in XCode
+4. Build and deploy WatchOS app
+5. Exhale 😮‍💨
