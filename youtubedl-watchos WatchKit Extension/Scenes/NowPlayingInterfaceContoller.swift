@@ -8,6 +8,7 @@
 import Foundation
 import WatchKit
 import Alamofire
+import SDWebImage
 
 var youtubedlServerURLBase = "https://" + Constants.downloadSrvInstance
 var youtubedlServerURLDL = youtubedlServerURLBase + "/api/v2/download?url=https://youtu.be"

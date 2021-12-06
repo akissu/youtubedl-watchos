@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch44"/>
     <dependencies>
-        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
@@ -35,10 +34,13 @@
                             <variation key="device=watch38mm">
                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                             </variation>
+                            <connections>
+                                <action selector="cacheEnableToggle:" destination="BVh-TY-jCX" id="rqe-WW-szb"/>
+                            </connections>
                         </switch>
                         <button width="1" height="39" alignment="left" title="Delete cache" id="sfx-11-473">
                             <connections>
-                                <action selector="cacheDeleter" destination="BVh-TY-jCX" id="3Hp-xa-hIR"/>
+                                <action selector="deleteCacheButton" destination="BVh-TY-jCX" id="xzn-c1-QeV"/>
                             </connections>
                         </button>
                         <label alignment="left" text="Cache videos on your watch, only recommended if you have lots of free storage." numberOfLines="5" id="1fG-0q-IlS">
@@ -53,6 +55,9 @@
                             <variation key="device=watch38mm">
                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                             </variation>
+                            <connections>
+                                <action selector="thumbnailsToggle:" destination="BVh-TY-jCX" id="Yh3-LC-6xU"/>
+                            </connections>
                         </switch>
                         <label alignment="left" text="Enable video thumbnails in search results, can cause slowdowns." numberOfLines="4" id="ow9-gW-XgZ">
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -61,14 +66,19 @@
                         <separator alignment="left" id="mJP-VR-Nt5">
                             <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </separator>
-                        <switch width="1" alignment="left" title="Audio Only" id="5qL-2L-XaO"/>
+                        <switch width="1" alignment="left" title="Audio Only" id="5qL-2L-XaO">
+                            <connections>
+                                <action selector="audioOnlyToggle:" destination="BVh-TY-jCX" id="nIE-Zq-O65"/>
+                            </connections>
+                        </switch>
                         <label alignment="left" text="Use audio only to save data." numberOfLines="2" id="ZMD-IY-hUU">
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                     </items>
                     <connections>
-                        <outlet property="cacheEnabler" destination="Ntz-r1-kFg" id="QQx-jv-7bZ"/>
+                        <outlet property="audioOnly" destination="5qL-2L-XaO" id="GPN-os-2Ac"/>
+                        <outlet property="cacheEnableToggle" destination="Ntz-r1-kFg" id="nyf-iy-yZy"/>
                         <outlet property="thumbnailEnabler" destination="HVk-Ub-TRL" id="GdA-2b-s10"/>
                     </connections>
                 </controller>
@@ -114,9 +124,17 @@
             <objects>
                 <controller identifier="NowPlayingInterfaceController" title="Now Playing" id="IGU-mI-QIU" customClass="NowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Label" id="MiS-2n-4v5"/>
+                        <label alignment="left" text="Label" id="MiS-2n-4v5">
+                            <variation key="device=watch38mm">
+                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                            </variation>
+                        </label>
                         <movie width="1" height="1" heightAdjustment="-45" alignment="left" id="T1W-VJ-tpl"/>
-                        <label alignment="left" text="Label" id="mYm-eV-xkZ"/>
+                        <label alignment="left" text="Label" id="mYm-eV-xkZ">
+                            <variation key="device=watch38mm">
+                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                            </variation>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="movie" destination="T1W-VJ-tpl" id="Ty4-Wd-Ism"/>

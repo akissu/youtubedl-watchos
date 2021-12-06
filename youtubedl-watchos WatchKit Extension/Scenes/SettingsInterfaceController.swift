@@ -14,10 +14,26 @@ class SettingsInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var cacheEnabler: WKInterfaceSwitch!
     @IBOutlet weak var thumbnailEnabler: WKInterfaceSwitch!
+    @IBOutlet weak var audioOnly: WKInterfaceSwitch!
+    @IBOutlet weak var cacheEnableToggle: WKInterfaceSwitch!
     
-    @IBAction func cacheDeleter() {
-        // delete cache innit
+    @IBAction func cacheEnableToggle(_ value: Bool) {
+        print(value)
     }
+    
+    @IBAction func deleteCacheButton() {
+        print("Button press")
+    }
+    
+    @IBAction func thumbnailsToggle(_ value: Bool) {
+        print(value)
+    }
+    
+    @IBAction func audioOnlyToggle(_ value: Bool) {
+        print(value)
+    }
+    
+    
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
