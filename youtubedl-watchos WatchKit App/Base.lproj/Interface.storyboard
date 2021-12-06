@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch45"/>
+    <device id="watch44"/>
     <dependencies>
         <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -31,10 +31,6 @@
             <objects>
                 <controller identifier="SettingsInterfaceController" title="Settings" id="BVh-TY-jCX" customClass="SettingsInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Cache videos on your watch, only recommended if you have lots of free storage." numberOfLines="5" id="1fG-0q-IlS">
-                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                        </label>
                         <switch width="1" height="39" alignment="left" value="YES" title="Video Cache" id="Ntz-r1-kFg">
                             <variation key="device=watch38mm">
                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
@@ -45,6 +41,10 @@
                                 <action selector="cacheDeleter" destination="BVh-TY-jCX" id="3Hp-xa-hIR"/>
                             </connections>
                         </button>
+                        <label alignment="left" text="Cache videos on your watch, only recommended if you have lots of free storage." numberOfLines="5" id="1fG-0q-IlS">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
                         <separator alignment="left" id="gWb-jl-lqV">
                             <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </separator>
@@ -56,6 +56,14 @@
                         </switch>
                         <label alignment="left" text="Enable video thumbnails in search results, can cause slowdowns." numberOfLines="4" id="ow9-gW-XgZ">
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
+                        <separator alignment="left" id="mJP-VR-Nt5">
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <switch width="1" alignment="left" title="Audio Only" id="5qL-2L-XaO"/>
+                        <label alignment="left" text="Use audio only to save data." numberOfLines="2" id="ZMD-IY-hUU">
+                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                     </items>
@@ -77,9 +85,12 @@
                                 <tableRow identifier="VideoRow" id="mqx-3d-RrS" customClass="VideoRow" customModule="youtubedl_watchos_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="tYe-qQ-bVm">
                                         <items>
-                                            <imageView width="45" height="35" alignment="left" verticalAlignment="center" id="C3B-Bo-uae"/>
+                                            <imageView width="45" height="27" alignment="left" verticalAlignment="center" id="C3B-Bo-uae"/>
                                             <label alignment="left" text="Label" numberOfLines="2" id="s08-8O-Sw8">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <variation key="device=watch38mm">
+                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                </variation>
                                             </label>
                                         </items>
                                     </group>
@@ -104,7 +115,7 @@
                 <controller identifier="NowPlayingInterfaceController" title="Now Playing" id="IGU-mI-QIU" customClass="NowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Label" id="MiS-2n-4v5"/>
-                        <movie width="134" height="100" alignment="left" id="T1W-VJ-tpl"/>
+                        <movie width="1" height="1" heightAdjustment="-45" alignment="left" id="T1W-VJ-tpl"/>
                         <label alignment="left" text="Label" id="mYm-eV-xkZ"/>
                     </items>
                     <connections>
