@@ -22,6 +22,11 @@ class SettingsInterfaceController: WKInterfaceController {
     }
     
     @IBAction func deleteCacheButton() {
+        do {
+            
+        } catch {
+            //what happened lol
+        }
         DeleteCacheButton.setTitle("Cleared")
         DeleteCacheButton.setEnabled(false)
     }

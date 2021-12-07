@@ -31,6 +31,9 @@
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <segue destination="BVh-TY-jCX" kind="relationship" relationship="nextPage" id="cKl-k3-dts"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="92" y="1"/>
