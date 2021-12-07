@@ -77,7 +77,7 @@ class SettingsInterfaceController: WKInterfaceController {
                 }
             }
             let bcf = ByteCountFormatter()
-            if ((totalSize >> 1024000000) != 0) {bcf.allowedUnits = [.useGB]} else {bcf.allowedUnits = [.useMB]}
+            if ((totalSize >= 1024000000) == true) {bcf.allowedUnits = [.useGB]} else {bcf.allowedUnits = [.useMB]}
             bcf.countStyle = .file
             let string = bcf.string(fromByteCount: totalSize)
             DeleteCacheButton.setTitle("Clear Cache (\(string))")
