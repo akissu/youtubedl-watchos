@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -11,7 +11,7 @@
             <objects>
                 <controller identifier="CacheContentsInterfaceController" title="Cache Contents" id="B9M-T2-Qe7" customClass="CacheContentsInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="-319"/>
+            <point key="canvasLocation" x="118" y="340"/>
         </scene>
         <!--Home-->
         <scene sceneID="aou-V4-d1y">
@@ -22,12 +22,6 @@
                             <fontDescription key="font" type="system" pointSize="20"/>
                             <connections>
                                 <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Cache" id="WS1-42-RHF">
-                            <fontDescription key="font" type="system" pointSize="20"/>
-                            <connections>
-                                <segue destination="B9M-T2-Qe7" kind="push" id="T9M-d6-842"/>
                             </connections>
                         </button>
                     </items>
@@ -94,10 +88,11 @@
                         <outlet property="audioOnly" destination="5qL-2L-XaO" id="GPN-os-2Ac"/>
                         <outlet property="cacheEnableToggle" destination="Ntz-r1-kFg" id="nyf-iy-yZy"/>
                         <outlet property="thumbnailEnabler" destination="HVk-Ub-TRL" id="GdA-2b-s10"/>
+                        <segue destination="B9M-T2-Qe7" kind="relationship" relationship="nextPage" id="krq-3h-QpL"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-38" y="432"/>
+            <point key="canvasLocation" x="-113" y="341"/>
         </scene>
         <!--Search-->
         <scene sceneID="6CP-fK-CVF">
