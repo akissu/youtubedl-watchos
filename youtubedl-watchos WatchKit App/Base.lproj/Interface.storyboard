@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -16,7 +16,7 @@
         <!--Home-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="InterfaceController" title="Home" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchtube_WatchKit_App" customModuleProvider="target">
+                <controller identifier="InterfaceController" title="Home" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="youtubedl_watchos_WatchKit_App" customModuleProvider="target">
                     <items>
                         <button width="1" alignment="left" title="Search" id="Uye-xf-Sds">
                             <fontDescription key="font" type="system" pointSize="20"/>
@@ -31,9 +31,6 @@
                             </connections>
                         </button>
                     </items>
-                    <connections>
-                        <segue destination="BVh-TY-jCX" kind="relationship" relationship="nextPage" id="sEP-9V-prD"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="92" y="1"/>
