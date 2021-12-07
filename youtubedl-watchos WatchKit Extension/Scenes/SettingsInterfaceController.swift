@@ -22,7 +22,6 @@ class SettingsInterfaceController: WKInterfaceController {
         
         if value == true {
             DeleteCacheButton.setHidden(false)
-            getCacheSize()
         }
         else {
             DeleteCacheButton.setHidden(true)
@@ -51,7 +50,21 @@ class SettingsInterfaceController: WKInterfaceController {
         DeleteCacheButton.setEnabled(false)
     }
     
-    func getCacheSize() {
+    @IBAction func thumbnailsToggle(_ value: Bool) {
+        print(value)
+    }
+    
+    @IBAction func audioOnlyToggle(_ value: Bool) {
+        print(value)
+    }
+    
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+       
+        // Configure interface objects here.
+    }
+
+    override func willActivate() {
         do {
             var totalSize = 0 as Int64
             let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
@@ -71,24 +84,6 @@ class SettingsInterfaceController: WKInterfaceController {
             DeleteCacheButton.setEnabled(false)
             DeleteCacheButton.setTitle("Cleared")
         }
-    }
-    
-    @IBAction func thumbnailsToggle(_ value: Bool) {
-        print(value)
-    }
-    
-    @IBAction func audioOnlyToggle(_ value: Bool) {
-        print(value)
-    }
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-       
-        // Configure interface objects here.
-    }
-
-    override func willActivate() {
-        getCacheSize()
         
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
