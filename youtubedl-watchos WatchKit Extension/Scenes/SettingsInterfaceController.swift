@@ -22,8 +22,20 @@ class SettingsInterfaceController: WKInterfaceController {
     }
     
     @IBAction func deleteCacheButton() {
+        
+        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         do {
-            
+            try FileManager.default.removeItem(at: documentsUrl)
+
+        } catch let error {
+            print(error)
+        }
+        
+        do {
+            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+            for file in files {
+                try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)")
+            }
         } catch {
             //what happened lol
         }
@@ -39,8 +51,6 @@ class SettingsInterfaceController: WKInterfaceController {
         print(value)
     }
     
-    
-    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         
@@ -49,9 +59,33 @@ class SettingsInterfaceController: WKInterfaceController {
 
     override func willActivate() {
         
+        //set delete cache button up incase it is disabled
         DeleteCacheButton.setEnabled(true)
-        DeleteCacheButton.setTitle("Clear Cache")
         
+        //add cache file size to button
+
+        do {
+            var totalSize = 0 as Int64
+            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+            for file in files {
+                if let fileAttributes = try? FileManager.default.attributesOfItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)") {
+                    if let bytes = fileAttributes[.size] as? Int64 {
+                        totalSize = totalSize+bytes
+                    }
+                }
+            }
+            let bcf = ByteCountFormatter()
+            bcf.allowedUnits = [.useMB]
+            bcf.countStyle = .file
+            let string = bcf.string(fromByteCount: totalSize)
+            DeleteCacheButton.setTitle("Clear Cache (\(string))")
+        } catch {
+            DeleteCacheButton.setEnabled(false)
+            DeleteCacheButton.setTitle("Cleared")
+        }
+        
+
+
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
@@ -61,4 +95,13 @@ class SettingsInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+}
+
+extension FileManager {
+    func sizeOfFile(atPath path: String) -> Int64? {
+        guard let attrs = try? attributesOfItem(atPath: path) else {
+            return nil
+        }
+        return attrs[.size] as? Int64
+    }
 }
