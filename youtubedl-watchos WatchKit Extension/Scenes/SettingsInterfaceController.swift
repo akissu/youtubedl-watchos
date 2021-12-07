@@ -65,6 +65,7 @@ class SettingsInterfaceController: WKInterfaceController {
     }
 
     override func willActivate() {
+        DeleteCacheButton.setEnabled(true)
         do {
             var totalSize = 0 as Int64
             let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
