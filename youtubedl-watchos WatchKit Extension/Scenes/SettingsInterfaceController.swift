@@ -17,8 +17,16 @@ class SettingsInterfaceController: WKInterfaceController {
     @IBOutlet weak var DeleteCacheButton: WKInterfaceButton!
     
     
-    @IBAction func cacheEnableToggle(_ value: Bool) {
-        print(value)
+    @IBAction func cacheEnablerToggle(_ value: Bool) {
+        //print(value)
+        
+        if value == true {
+            DeleteCacheButton.setHidden(false)
+            getCacheSize()
+        }
+        else {
+            DeleteCacheButton.setHidden(true)
+        }
     }
     
     @IBAction func deleteCacheButton() {
@@ -43,27 +51,7 @@ class SettingsInterfaceController: WKInterfaceController {
         DeleteCacheButton.setEnabled(false)
     }
     
-    @IBAction func thumbnailsToggle(_ value: Bool) {
-        print(value)
-    }
-    
-    @IBAction func audioOnlyToggle(_ value: Bool) {
-        print(value)
-    }
-    
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
-        // Configure interface objects here.
-    }
-
-    override func willActivate() {
-        
-        //set delete cache button up incase it is disabled
-        DeleteCacheButton.setEnabled(true)
-        
-        //add cache file size to button
-
+    func getCacheSize() {
         do {
             var totalSize = 0 as Int64
             let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
@@ -83,9 +71,24 @@ class SettingsInterfaceController: WKInterfaceController {
             DeleteCacheButton.setEnabled(false)
             DeleteCacheButton.setTitle("Cleared")
         }
+    }
+    
+    @IBAction func thumbnailsToggle(_ value: Bool) {
+        print(value)
+    }
+    
+    @IBAction func audioOnlyToggle(_ value: Bool) {
+        print(value)
+    }
+    
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
+       
+        // Configure interface objects here.
+    }
+
+    override func willActivate() {
         
-
-
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
