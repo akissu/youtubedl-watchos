@@ -38,7 +38,7 @@
                                 <action selector="cacheEnableToggle:" destination="BVh-TY-jCX" id="rqe-WW-szb"/>
                             </connections>
                         </switch>
-                        <button width="1" height="39" alignment="left" title="Delete cache" id="sfx-11-473">
+                        <button width="1" height="39" alignment="left" title="Clear Cache" id="sfx-11-473">
                             <connections>
                                 <action selector="deleteCacheButton" destination="BVh-TY-jCX" id="xzn-c1-QeV"/>
                             </connections>
@@ -77,6 +77,7 @@
                         </label>
                     </items>
                     <connections>
+                        <outlet property="DeleteCacheButton" destination="sfx-11-473" id="eht-Kf-dSN"/>
                         <outlet property="audioOnly" destination="5qL-2L-XaO" id="GPN-os-2Ac"/>
                         <outlet property="cacheEnableToggle" destination="Ntz-r1-kFg" id="nyf-iy-yZy"/>
                         <outlet property="thumbnailEnabler" destination="HVk-Ub-TRL" id="GdA-2b-s10"/>
