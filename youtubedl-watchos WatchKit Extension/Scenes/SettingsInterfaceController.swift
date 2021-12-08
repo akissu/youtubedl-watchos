@@ -16,15 +16,21 @@ class SettingsInterfaceController: WKInterfaceController {
     @IBOutlet weak var cacheEnableToggle: WKInterfaceSwitch!
     @IBOutlet weak var DeleteCacheButton: WKInterfaceButton!
     
+    let key: String = "isToggleEnabled"
+    let userDefaults = UserDefaults.standard
+    
     
     @IBAction func cacheEnablerToggle(_ value: Bool) {
         //print(value)
-        
+        //UserDefaults.standard.set(value, forKey: key)
         if value == true {
+            UserDefaults.standard.set(value, forKey: key)
             DeleteCacheButton.setHidden(false)
+            
         }
         else {
             DeleteCacheButton.setHidden(true)
+            UserDefaults.standard.set(value, forKey: key)
         }
     }
     
@@ -60,11 +66,14 @@ class SettingsInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-       
+        
         // Configure interface objects here.
     }
 
     override func willActivate() {
+        cacheEnableToggle.setOn(userDefaults.bool(forKey: key))
+        //cacheEnableToggle.setEnabled(userDefaults.bool(forKey: key))
+        
         DeleteCacheButton.setEnabled(true)
         do {
             var totalSize = 0 as Int64
