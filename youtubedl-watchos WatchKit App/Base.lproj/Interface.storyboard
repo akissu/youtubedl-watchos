@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -45,7 +45,7 @@
                                 <action selector="cacheEnablerToggle:" destination="BVh-TY-jCX" id="omf-SC-gUN"/>
                             </connections>
                         </switch>
-                        <button width="1" height="39" alignment="left" title="Clear Cache" id="sfx-11-473">
+                        <button width="1" height="39" alignment="left" title="Clear Cache" enabled="NO" id="sfx-11-473">
                             <connections>
                                 <action selector="deleteCacheButton" destination="BVh-TY-jCX" id="xzn-c1-QeV"/>
                             </connections>

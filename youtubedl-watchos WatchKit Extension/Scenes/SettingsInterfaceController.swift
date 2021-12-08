@@ -21,39 +21,61 @@ class SettingsInterfaceController: WKInterfaceController {
     
     
     @IBAction func cacheEnablerToggle(_ value: Bool) {
-        //print(value)
-        //UserDefaults.standard.set(value, forKey: key)
         if value == true {
             UserDefaults.standard.set(value, forKey: key)
             DeleteCacheButton.setHidden(false)
-            
+            DeleteCacheButton.setTitle("Cleared")
         }
         else {
-            DeleteCacheButton.setHidden(true)
+           
             UserDefaults.standard.set(value, forKey: key)
+            
+            let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            do {
+                try FileManager.default.removeItem(at: documentsUrl)
+
+            } catch let error {
+                print(error)
+            }
+            
+            do {
+                let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+                for file in files {
+                    try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)")
+                }
+            } catch {
+                //what happened lol
+            }
+            DeleteCacheButton.setHidden(true)
         }
     }
     
     @IBAction func deleteCacheButton() {
         
-        let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        do {
-            try FileManager.default.removeItem(at: documentsUrl)
+        let action1 = WKAlertAction(title: "Delete Cache", style: .destructive) { [weak self] in
+            let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            do {
+                try FileManager.default.removeItem(at: documentsUrl)
 
-        } catch let error {
-            print(error)
+            } catch let error {
+                print(error)
+            }
+            
+            do {
+                let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+                for file in files {
+                    try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)")
+                }
+            } catch {
+                //what happened lol
+            }
+            self!.DeleteCacheButton.setTitle("Cleared")
+            self!.DeleteCacheButton.setEnabled(false)
         }
         
-        do {
-            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
-            for file in files {
-                try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)")
-            }
-        } catch {
-            //what happened lol
-        }
-        DeleteCacheButton.setTitle("Cleared")
-        DeleteCacheButton.setEnabled(false)
+        let action2 = WKAlertAction(title: "Cancel", style: .cancel) {}
+        
+        presentAlert(withTitle: "Delete Cache?", message: "Are you sure you want to delete the cache?", preferredStyle: .alert, actions: [action1, action2])
     }
     
     @IBAction func thumbnailsToggle(_ value: Bool) {
@@ -66,7 +88,6 @@ class SettingsInterfaceController: WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
         // Configure interface objects here.
     }
 

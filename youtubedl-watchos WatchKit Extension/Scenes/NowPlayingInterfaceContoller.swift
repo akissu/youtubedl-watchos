@@ -40,7 +40,7 @@ class NowPlayingInterfaceController: WKInterfaceController {
         self.statusLabel.setText("Waiting for server...")
         
         // dont forget about caching system
-        let cachingSetting = true
+        let cachingSetting = UserDefaults.standard.bool(forKey: "isToggleEnabled")
 
         let destinationCached: DownloadRequest.Destination = { _, _ in
             let cachingFileURL = URL(fileURLWithPath: NSHomeDirectory()+"/Documents/cache").appendingPathComponent("\(self.video.id).mp4")
