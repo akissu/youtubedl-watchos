@@ -19,6 +19,8 @@ class CacheContentsInterfaceController: WKInterfaceController {
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
+        
+        //load videos with accompanying metadata.
         super.willActivate()
     }
 

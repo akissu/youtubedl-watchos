@@ -11,24 +11,26 @@ import Foundation
 
 class SettingsInterfaceController: WKInterfaceController {
     
-    @IBOutlet weak var thumbnailEnabler: WKInterfaceSwitch!
-    @IBOutlet weak var audioOnly: WKInterfaceSwitch!
-    @IBOutlet weak var cacheEnableToggle: WKInterfaceSwitch!
-    @IBOutlet weak var DeleteCacheButton: WKInterfaceButton!
     
-    let key: String = "isToggleEnabled"
+    @IBOutlet weak var cacheToggle: WKInterfaceSwitch!
+    @IBOutlet weak var cacheDeleteButton: WKInterfaceButton!
+    @IBOutlet weak var thumbnailsToggle: WKInterfaceSwitch!
+    @IBOutlet weak var audioOnlyToggle: WKInterfaceSwitch!
+    
     let userDefaults = UserDefaults.standard
-    
-    
-    @IBAction func cacheEnablerToggle(_ value: Bool) {
+
+    @IBAction func cacheToggle(_ value: Bool) {
+
         if value == true {
-            UserDefaults.standard.set(value, forKey: key)
-            DeleteCacheButton.setHidden(false)
-            DeleteCacheButton.setTitle("Cleared")
+            userDefaults.set(value, forKey: settingsKeys.cacheToggle)
+            cacheDeleteButton.setHidden(false)
+            
+            willActivate()
+
         }
         else {
            
-            UserDefaults.standard.set(value, forKey: key)
+            userDefaults.set(value, forKey: settingsKeys.cacheToggle)
             
             let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             do {
@@ -46,20 +48,13 @@ class SettingsInterfaceController: WKInterfaceController {
             } catch {
                 //what happened lol
             }
-            DeleteCacheButton.setHidden(true)
+            cacheDeleteButton.setHidden(true)
         }
     }
     
     @IBAction func deleteCacheButton() {
         
         let action1 = WKAlertAction(title: "Delete Cache", style: .destructive) { [weak self] in
-            let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-            do {
-                try FileManager.default.removeItem(at: documentsUrl)
-
-            } catch let error {
-                print(error)
-            }
             
             do {
                 let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
@@ -69,8 +64,8 @@ class SettingsInterfaceController: WKInterfaceController {
             } catch {
                 //what happened lol
             }
-            self!.DeleteCacheButton.setTitle("Cleared")
-            self!.DeleteCacheButton.setEnabled(false)
+            self!.cacheDeleteButton.setTitle("Cleared")
+            self!.cacheDeleteButton.setEnabled(false)
         }
         
         let action2 = WKAlertAction(title: "Cancel", style: .cancel) {}
@@ -79,11 +74,11 @@ class SettingsInterfaceController: WKInterfaceController {
     }
     
     @IBAction func thumbnailsToggle(_ value: Bool) {
-        print(value)
+        userDefaults.set(value, forKey: settingsKeys.thumbnailsToggle)
     }
     
     @IBAction func audioOnlyToggle(_ value: Bool) {
-        print(value)
+        userDefaults.set(value, forKey: settingsKeys.audioOnlyToggle)
     }
     
     override func awake(withContext context: Any?) {
@@ -92,10 +87,26 @@ class SettingsInterfaceController: WKInterfaceController {
     }
 
     override func willActivate() {
-        cacheEnableToggle.setOn(userDefaults.bool(forKey: key))
-        //cacheEnableToggle.setEnabled(userDefaults.bool(forKey: key))
         
-        DeleteCacheButton.setEnabled(true)
+        
+        if userDefaults.value(forKey: settingsKeys.cacheToggle) == nil {
+            userDefaults.set(true, forKey: settingsKeys.cacheToggle)
+        }
+        if userDefaults.value(forKey: settingsKeys.thumbnailsToggle) == nil {
+            userDefaults.set(true, forKey: settingsKeys.thumbnailsToggle)
+        }
+        if userDefaults.value(forKey: settingsKeys.audioOnlyToggle) == nil {
+            userDefaults.set(false, forKey: settingsKeys.audioOnlyToggle)
+        }
+
+        cacheToggle.setOn(userDefaults.bool(forKey: settingsKeys.cacheToggle))
+        thumbnailsToggle.setOn(userDefaults.bool(forKey: settingsKeys.thumbnailsToggle))
+        audioOnlyToggle.setOn(userDefaults.bool(forKey: settingsKeys.audioOnlyToggle))
+
+        cacheDeleteButton.setHidden(!userDefaults.bool(forKey: settingsKeys.cacheToggle))
+        
+        // set cache button to enabled, if its empty just keep it as cleared and disable it
+        cacheDeleteButton.setEnabled(true)
         do {
             var totalSize = 0 as Int64
             let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
@@ -110,10 +121,10 @@ class SettingsInterfaceController: WKInterfaceController {
             if ((totalSize >= 1024000000) == true) {bcf.allowedUnits = [.useGB]} else {bcf.allowedUnits = [.useMB]}
             bcf.countStyle = .file
             let string = bcf.string(fromByteCount: totalSize)
-            DeleteCacheButton.setTitle("Clear Cache (\(string))")
+            cacheDeleteButton.setTitle("Clear Cache (\(string))")
         } catch {
-            DeleteCacheButton.setEnabled(false)
-            DeleteCacheButton.setTitle("Cleared")
+            cacheDeleteButton.setEnabled(false)
+            cacheDeleteButton.setTitle("Cleared")
         }
         
         // This method is called when watch view controller is about to be visible to user
@@ -125,13 +136,4 @@ class SettingsInterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
-}
-
-extension FileManager {
-    func sizeOfFile(atPath path: String) -> Int64? {
-        guard let attrs = try? attributesOfItem(atPath: path) else {
-            return nil
-        }
-        return attrs[.size] as? Int64
-    }
 }

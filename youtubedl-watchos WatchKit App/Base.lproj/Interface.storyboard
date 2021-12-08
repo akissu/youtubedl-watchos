@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -42,12 +42,12 @@
                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                             </variation>
                             <connections>
-                                <action selector="cacheEnablerToggle:" destination="BVh-TY-jCX" id="omf-SC-gUN"/>
+                                <action selector="cacheToggle:" destination="BVh-TY-jCX" id="kqZ-OR-5s8"/>
                             </connections>
                         </switch>
                         <button width="1" height="39" alignment="left" title="Clear Cache" enabled="NO" id="sfx-11-473">
                             <connections>
-                                <action selector="deleteCacheButton" destination="BVh-TY-jCX" id="xzn-c1-QeV"/>
+                                <action selector="deleteCacheButton" destination="BVh-TY-jCX" id="uVf-zB-wCL"/>
                             </connections>
                         </button>
                         <label alignment="left" text="Cache videos on your watch, only recommended if you have lots of free storage." numberOfLines="5" id="1fG-0q-IlS">
@@ -63,7 +63,7 @@
                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                             </variation>
                             <connections>
-                                <action selector="thumbnailsToggle:" destination="BVh-TY-jCX" id="Yh3-LC-6xU"/>
+                                <action selector="thumbnailsToggle:" destination="BVh-TY-jCX" id="ZBK-QY-vIC"/>
                             </connections>
                         </switch>
                         <label alignment="left" text="Enable video thumbnails in search results, can cause slowdowns." numberOfLines="4" id="ow9-gW-XgZ">
@@ -75,7 +75,7 @@
                         </separator>
                         <switch width="1" alignment="left" title="Audio Only" id="5qL-2L-XaO">
                             <connections>
-                                <action selector="audioOnlyToggle:" destination="BVh-TY-jCX" id="nIE-Zq-O65"/>
+                                <action selector="audioOnlyToggle:" destination="BVh-TY-jCX" id="Bk9-be-HSi"/>
                             </connections>
                         </switch>
                         <label alignment="left" text="Use audio only to save data." numberOfLines="2" id="ZMD-IY-hUU">
@@ -84,10 +84,10 @@
                         </label>
                     </items>
                     <connections>
-                        <outlet property="DeleteCacheButton" destination="sfx-11-473" id="eht-Kf-dSN"/>
-                        <outlet property="audioOnly" destination="5qL-2L-XaO" id="GPN-os-2Ac"/>
-                        <outlet property="cacheEnableToggle" destination="Ntz-r1-kFg" id="nyf-iy-yZy"/>
-                        <outlet property="thumbnailEnabler" destination="HVk-Ub-TRL" id="GdA-2b-s10"/>
+                        <outlet property="audioOnlyToggle" destination="5qL-2L-XaO" id="bgK-9O-RSr"/>
+                        <outlet property="cacheDeleteButton" destination="sfx-11-473" id="QBq-K9-6d4"/>
+                        <outlet property="cacheToggle" destination="Ntz-r1-kFg" id="ZHl-K6-3dY"/>
+                        <outlet property="thumbnailsToggle" destination="HVk-Ub-TRL" id="yF1-8l-uQw"/>
                         <segue destination="B9M-T2-Qe7" kind="relationship" relationship="nextPage" id="krq-3h-QpL"/>
                     </connections>
                 </controller>
