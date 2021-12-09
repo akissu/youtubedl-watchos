@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch45"/>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -118,22 +118,36 @@
                         <group width="1" height="40" alignment="left" id="WBM-cw-F2V">
                             <items>
                                 <button width="40" height="40" alignment="left" verticalAlignment="center" title="-" id="FkJ-zB-ew1">
-                                    <fontDescription key="font" type="system" pointSize="45"/>
+                                    <fontDescription key="font" type="system" pointSize="30"/>
+                                    <variation key="device=watch38mm" height="35" width="35"/>
                                     <connections>
                                         <action selector="resultLower" destination="BVh-TY-jCX" id="GvO-3g-eYl"/>
                                     </connections>
                                 </button>
                                 <label alignment="center" verticalAlignment="center" text="30 Results" id="bkB-nj-7Sf">
                                     <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                    </variation>
+                                    <variation key="device=watch40mm">
+                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                    </variation>
+                                    <variation key="device=watch42mm">
+                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                    </variation>
                                 </label>
                                 <button width="40" height="40" alignment="right" verticalAlignment="center" title="+" id="blm-NZ-hf1">
                                     <fontDescription key="font" type="system" pointSize="45"/>
+                                    <variation key="device=watch38mm" height="35" width="35">
+                                        <fontDescription key="font" type="system" pointSize="30"/>
+                                    </variation>
                                     <connections>
                                         <action selector="resultHigher" destination="BVh-TY-jCX" id="QIm-vT-AZ1"/>
                                     </connections>
                                 </button>
                             </items>
                             <color key="backgroundColor" red="0.1333208978" green="0.1332592964" blue="0.13741382960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <variation key="device=watch38mm" height="35"/>
                         </group>
                         <label width="1" alignment="left" text="Less results will load faster." numberOfLines="2" id="Alf-Bc-dtr">
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
