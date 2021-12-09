@@ -21,6 +21,13 @@ class CacheContentsInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         
         //load videos with accompanying metadata.
+        do {
+            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+            
+        } catch {
+            //no errors should occur i hope
+            print(error)
+        }
         super.willActivate()
     }
 

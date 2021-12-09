@@ -41,10 +41,12 @@ class VideoListInterfaceController: WKInterfaceController {
                 }
             row.titleLabel.setText(videos[i].title)
             row.videoId = videos[i].id
-            row.thumbImg.sd_setImage(with: videos[i].img)
             
-            // image url available at videos[i].img
-            
+            if UserDefaults.standard.bool(forKey: settingsKeys.thumbnailsToggle) == false {
+                row.thumbImg.setHidden(true)
+            } else {
+                row.thumbImg.sd_setImage(with: videos[i].img)
+            }
         }
     }
         

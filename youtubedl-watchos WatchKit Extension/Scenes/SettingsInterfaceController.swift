@@ -16,6 +16,7 @@ class SettingsInterfaceController: WKInterfaceController {
     @IBOutlet weak var cacheDeleteButton: WKInterfaceButton!
     @IBOutlet weak var thumbnailsToggle: WKInterfaceSwitch!
     @IBOutlet weak var audioOnlyToggle: WKInterfaceSwitch!
+    @IBOutlet weak var resultsLabel: WKInterfaceLabel!
     
     let userDefaults = UserDefaults.standard
 
@@ -81,13 +82,30 @@ class SettingsInterfaceController: WKInterfaceController {
         userDefaults.set(value, forKey: settingsKeys.audioOnlyToggle)
     }
     
+    @IBAction func resultLower() {
+        if userDefaults.integer(forKey: settingsKeys.resultsCount) > 3 {
+            userDefaults.set(userDefaults.value(forKey: settingsKeys.resultsCount) as! Int-1, forKey: settingsKeys.resultsCount)
+            updateLabel()
+        }
+    }
+    
+    @IBAction func resultHigher() {
+        if userDefaults.integer(forKey: settingsKeys.resultsCount) < 30 {
+            userDefaults.set(userDefaults.value(forKey: settingsKeys.resultsCount) as! Int+1, forKey: settingsKeys.resultsCount)
+            updateLabel()
+        }
+    }
+    
+    func updateLabel() {
+        resultsLabel.setText("\(String(describing: userDefaults.value(forKey: settingsKeys.resultsCount) as! Int)) Results")
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         // Configure interface objects here.
     }
 
     override func willActivate() {
-        
         
         if userDefaults.value(forKey: settingsKeys.cacheToggle) == nil {
             userDefaults.set(true, forKey: settingsKeys.cacheToggle)
@@ -97,6 +115,9 @@ class SettingsInterfaceController: WKInterfaceController {
         }
         if userDefaults.value(forKey: settingsKeys.audioOnlyToggle) == nil {
             userDefaults.set(false, forKey: settingsKeys.audioOnlyToggle)
+        }
+        if userDefaults.value(forKey: settingsKeys.resultsCount) == nil {
+            userDefaults.set(15, forKey: settingsKeys.resultsCount)
         }
 
         cacheToggle.setOn(userDefaults.bool(forKey: settingsKeys.cacheToggle))
@@ -126,6 +147,8 @@ class SettingsInterfaceController: WKInterfaceController {
             cacheDeleteButton.setEnabled(false)
             cacheDeleteButton.setTitle("Cleared")
         }
+        
+        updateLabel()
         
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

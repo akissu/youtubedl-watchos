@@ -18,4 +18,5 @@ struct settingsKeys {
     static let cacheToggle = "settings.cacheToggleKey"
     static let thumbnailsToggle = "settings.thumbnailsToggleKey"
     static let audioOnlyToggle = "settings.audioOnlyToggleKey"
+    static let resultsCount = "settings.resultsCount"
 }

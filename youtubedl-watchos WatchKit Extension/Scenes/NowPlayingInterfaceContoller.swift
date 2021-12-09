@@ -11,7 +11,6 @@ import Alamofire
 import SDWebImage
 
 var youtubedlServerURLBase = "https://" + Constants.downloadSrvInstance
-var youtubedlServerURLDL = youtubedlServerURLBase + "/api/v2/download?url=https://youtu.be"
 
 class NowPlayingInterfaceController: WKInterfaceController {
 
@@ -22,6 +21,18 @@ class NowPlayingInterfaceController: WKInterfaceController {
     var video: Video!
     
     override func awake(withContext context: Any?) {
+        var dlType: String
+        var fileType: String
+        if UserDefaults.standard.bool(forKey: settingsKeys.audioOnlyToggle) == false {
+            dlType = "download"
+            fileType = "mp4"
+        } else {
+            dlType = "audio"
+            fileType = "mp3"
+        }
+
+        let youtubedlServerURLDL = youtubedlServerURLBase + "/api/v2/\(dlType)?url=https://youtu.be"
+        
         super.awake(withContext: context)
         
         if context != nil {
@@ -33,27 +44,25 @@ class NowPlayingInterfaceController: WKInterfaceController {
         } else {
             self.titleLabel.setText("Nothing is playing")
         }
-        
-    
 
         let vidpath = youtubedlServerURLDL+"/"+self.video.id
         self.statusLabel.setText("Waiting for server...")
         
         // dont forget about caching system
-        let cachingSetting = UserDefaults.standard.bool(forKey: "isToggleEnabled")
+        let cachingSetting = UserDefaults.standard.bool(forKey: settingsKeys.cacheToggle)
 
         let destinationCached: DownloadRequest.Destination = { _, _ in
-            let cachingFileURL = URL(fileURLWithPath: NSHomeDirectory()+"/Documents/cache").appendingPathComponent("\(self.video.id).mp4")
+            let cachingFileURL = URL(fileURLWithPath: NSHomeDirectory()+"/Documents/cache").appendingPathComponent("\(self.video.id).\(fileType)")
             return (cachingFileURL, [.removePreviousFile, .createIntermediateDirectories])
         }
         let destination: DownloadRequest.Destination = { _, _ in
-            let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("video.mp4")
+            let fileURL = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("video.\(fileType)")
             return (fileURL, [.removePreviousFile, .createIntermediateDirectories])
         }
                 
         if cachingSetting == true {
-            if FileManager.default.fileExists(atPath: NSHomeDirectory()+"/Documents/cache/\(self.video.id).mp4") == true {
-                self.movie.setMovieURL(URL(fileURLWithPath: NSHomeDirectory()+"/Documents/cache").appendingPathComponent("\(self.video.id).mp4"))
+            if FileManager.default.fileExists(atPath: NSHomeDirectory()+"/Documents/cache/\(self.video.id).\(fileType)") == true {
+                self.movie.setMovieURL(URL(fileURLWithPath: NSHomeDirectory()+"/Documents/cache").appendingPathComponent("\(self.video.id).\(fileType)"))
                 self.statusLabel.setText("Loaded from cache.")
             } else {
                 AF.download(vidpath, to: destinationCached).response { response in

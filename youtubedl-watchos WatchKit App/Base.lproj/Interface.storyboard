@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch44"/>
+    <device id="watch45"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
@@ -9,7 +9,17 @@
         <!--Cache Contents-->
         <scene sceneID="09Q-dN-mHl">
             <objects>
-                <controller identifier="CacheContentsInterfaceController" title="Cache Contents" id="B9M-T2-Qe7" customClass="CacheContentsInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension"/>
+                <controller identifier="CacheContentsInterfaceController" title="Cache Contents" id="B9M-T2-Qe7" customClass="CacheContentsInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="VRc-BZ-fnW">
+                            <items>
+                                <tableRow id="uBO-zy-wCy">
+                                    <group key="rootItem" width="1" alignment="left" id="m74-j7-9oP"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
             </objects>
             <point key="canvasLocation" x="118" y="340"/>
         </scene>
@@ -66,7 +76,7 @@
                                 <action selector="thumbnailsToggle:" destination="BVh-TY-jCX" id="ZBK-QY-vIC"/>
                             </connections>
                         </switch>
-                        <label alignment="left" text="Enable video thumbnails in search results, can cause slowdowns." numberOfLines="4" id="ow9-gW-XgZ">
+                        <label alignment="left" text="Enable video thumbnails in search results, can save data if disabled and speedup loads." numberOfLines="5" id="ow9-gW-XgZ">
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
@@ -74,6 +84,9 @@
                             <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </separator>
                         <switch width="1" alignment="left" title="Audio Only" id="5qL-2L-XaO">
+                            <variation key="device=watch38mm">
+                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            </variation>
                             <connections>
                                 <action selector="audioOnlyToggle:" destination="BVh-TY-jCX" id="Bk9-be-HSi"/>
                             </connections>
@@ -82,17 +95,45 @@
                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
+                        <separator alignment="left" id="BhW-To-hPy">
+                            <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <group width="1" height="40" alignment="left" id="WBM-cw-F2V">
+                            <items>
+                                <button width="40" height="40" alignment="left" verticalAlignment="center" title="-" id="FkJ-zB-ew1">
+                                    <fontDescription key="font" type="system" pointSize="45"/>
+                                    <connections>
+                                        <action selector="resultLower" destination="BVh-TY-jCX" id="GvO-3g-eYl"/>
+                                    </connections>
+                                </button>
+                                <label alignment="center" verticalAlignment="center" text="30 Results" id="bkB-nj-7Sf">
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle3"/>
+                                </label>
+                                <button width="40" height="40" alignment="right" verticalAlignment="center" title="+" id="blm-NZ-hf1">
+                                    <fontDescription key="font" type="system" pointSize="45"/>
+                                    <connections>
+                                        <action selector="resultHigher" destination="BVh-TY-jCX" id="QIm-vT-AZ1"/>
+                                    </connections>
+                                </button>
+                            </items>
+                            <color key="backgroundColor" red="0.1333208978" green="0.1332592964" blue="0.13741382960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </group>
+                        <label width="1" alignment="left" text="Less results will load faster." numberOfLines="2" id="Alf-Bc-dtr">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="audioOnlyToggle" destination="5qL-2L-XaO" id="bgK-9O-RSr"/>
                         <outlet property="cacheDeleteButton" destination="sfx-11-473" id="QBq-K9-6d4"/>
                         <outlet property="cacheToggle" destination="Ntz-r1-kFg" id="ZHl-K6-3dY"/>
+                        <outlet property="resultsLabel" destination="bkB-nj-7Sf" id="VHz-wM-BvW"/>
                         <outlet property="thumbnailsToggle" destination="HVk-Ub-TRL" id="yF1-8l-uQw"/>
                         <segue destination="B9M-T2-Qe7" kind="relationship" relationship="nextPage" id="krq-3h-QpL"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-113" y="341"/>
+            <point key="canvasLocation" x="-113.33333333333334" y="315.76446280991735"/>
         </scene>
         <!--Search-->
         <scene sceneID="6CP-fK-CVF">
@@ -131,7 +172,7 @@
         <!--Now Playing-->
         <scene sceneID="osD-rO-mxG">
             <objects>
-                <controller identifier="NowPlayingInterfaceController" title="Now Playing" id="IGU-mI-QIU" customClass="NowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                <controller identifier="NowPlayingInterfaceController" title="Now Playing" contentMode="scaleAspectFit" id="IGU-mI-QIU" customClass="NowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Label" id="MiS-2n-4v5">
                             <variation key="device=watch38mm">
@@ -152,7 +193,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="546" y="1"/>
+            <point key="canvasLocation" x="342" y="300"/>
         </scene>
     </scenes>
 </document>
