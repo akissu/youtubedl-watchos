@@ -17,6 +17,7 @@
 		AAD7F128275D5D4B00D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F127275D5D4B00D4A882 /* SwiftyJSON */; };
 		AAD7F12A275D5D5D00D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F129275D5D5D00D4A882 /* SwiftyJSON */; };
 		AAD7F12C275D5D6600D4A882 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = AAD7F12B275D5D6600D4A882 /* SwiftyJSON */; };
+		AAE7513E2762A03000628BC7 /* CacheTableRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE7513D2762A03000628BC7 /* CacheTableRow.swift */; };
 		AAF50E3F275FC74500E4679D /* CacheContentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF50E3E275FC74500E4679D /* CacheContentsInterfaceController.swift */; };
 		D72C93D4257D97740056D0BA /* youtubedl-watchos WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D72C93DA257D97740056D0BA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D72C93D8257D97740056D0BA /* Interface.storyboard */; };
@@ -77,6 +78,7 @@
 
 /* Begin PBXFileReference section */
 		891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
+		AAE7513D2762A03000628BC7 /* CacheTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTableRow.swift; sourceTree = "<group>"; };
 		AAF50E3E275FC74500E4679D /* CacheContentsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheContentsInterfaceController.swift; sourceTree = "<group>"; };
 		D72C93CF257D97740056D0BA /* youtubedl-watchos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtubedl-watchos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72C93D3257D97740056D0BA /* youtubedl-watchos WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "youtubedl-watchos WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				D72C942F257DB42D0056D0BA /* VideoTableRow.swift */,
+				AAE7513D2762A03000628BC7 /* CacheTableRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				D72C93EA257D97770056D0BA /* ExtensionDelegate.swift in Sources */,
 				D72C93E8257D97770056D0BA /* InterfaceController.swift in Sources */,
 				AAF50E3F275FC74500E4679D /* CacheContentsInterfaceController.swift in Sources */,
+				AAE7513E2762A03000628BC7 /* CacheTableRow.swift in Sources */,
 				891B09D5275D0F8B00696841 /* SettingsInterfaceController.swift in Sources */,
 				D72C93EC257D97770056D0BA /* ComplicationController.swift in Sources */,
 				D72C9430257DB42D0056D0BA /* VideoTableRow.swift in Sources */,

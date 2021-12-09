@@ -13,12 +13,25 @@
                     <items>
                         <table alignment="left" id="VRc-BZ-fnW">
                             <items>
-                                <tableRow id="uBO-zy-wCy">
-                                    <group key="rootItem" width="1" alignment="left" id="m74-j7-9oP"/>
+                                <tableRow identifier="cachedVideoRow" id="uBO-zy-wCy">
+                                    <group key="rootItem" width="1" alignment="left" id="m74-j7-9oP">
+                                        <items>
+                                            <imageView width="45" height="27" alignment="left" verticalAlignment="center" id="rrD-ku-Mln"/>
+                                            <label alignment="left" text="Label" id="uD7-4I-4s5">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <variation key="device=watch38mm">
+                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                </variation>
+                                            </label>
+                                        </items>
+                                    </group>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="videoTableRow" destination="VRc-BZ-fnW" id="SAf-2K-Bp6"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="118" y="340"/>
