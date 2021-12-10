@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch45"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -11,7 +11,7 @@
             <objects>
                 <controller identifier="CacheContentsInterfaceController" title="Cache Contents" id="B9M-T2-Qe7" customClass="CacheContentsInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
                     <items>
-                        <table alignment="left" id="VRc-BZ-fnW">
+                        <table alignment="left" id="VRc-BZ-fnW" userLabel="Cache Table Row">
                             <items>
                                 <tableRow identifier="cachedVideoRow" id="uBO-zy-wCy" userLabel="CacheVideoRow" customClass="CacheTableRow" customModule="youtubedl_watchos_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="m74-j7-9oP">
@@ -34,7 +34,7 @@
                         </table>
                     </items>
                     <connections>
-                        <outlet property="videoTableRow" destination="VRc-BZ-fnW" id="SAf-2K-Bp6"/>
+                        <outlet property="cacheTableRow" destination="VRc-BZ-fnW" id="nVg-jR-LhM"/>
                     </connections>
                 </controller>
             </objects>

@@ -11,7 +11,7 @@ import SDWebImage
 
 class CacheContentsInterfaceController: WKInterfaceController {
     
-    @IBOutlet weak var videoTableRow: WKInterfaceTable!
+    @IBOutlet weak var cacheTableRow: WKInterfaceTable!
     var files = ["e"]
     
     override func awake(withContext context: Any?) {
@@ -25,14 +25,14 @@ class CacheContentsInterfaceController: WKInterfaceController {
         //load videos with accompanying metadata.
         do {
             files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
-            videoTableRow.setNumberOfRows(files.count, withRowType: "VideoRow")
-            videoTableRow.setHidden(false)
+            cacheTableRow.setNumberOfRows(files.count, withRowType: "cachedVideoRow")
+            cacheTableRow.setHidden(false)
             var ids = ["gamingmoment"]
             
             for i in 0 ..< files.count {
                 let file = files[i]
                 let videoID = file.components(separatedBy: ".")[0]
-                guard let row = videoTableRow.rowController(at: i) as? CacheTableRow else {
+                guard let row = cacheTableRow.rowController(at: i) as? CacheTableRow else {
                     continue
                 }
                 
@@ -47,6 +47,7 @@ class CacheContentsInterfaceController: WKInterfaceController {
                     row.cacheThumbImage.sd_setImage(with: URL(string: data[1]))
                     row.videoId = videoID
                     ids.append(videoID)
+                    print(i)
                 }
             }
             
