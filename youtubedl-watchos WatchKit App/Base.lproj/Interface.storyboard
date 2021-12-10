@@ -57,7 +57,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="92" y="1"/>
+            <point key="canvasLocation" x="117" y="1"/>
         </scene>
         <!--Settings-->
         <scene sceneID="5UF-dP-8ee">
@@ -166,6 +166,13 @@
             </objects>
             <point key="canvasLocation" x="-113.33333333333334" y="315.76446280991735"/>
         </scene>
+        <!--Cache Now Playing Interface Controller-->
+        <scene sceneID="DzC-je-eHb">
+            <objects>
+                <controller id="znb-rE-3Gy" customClass="CacheNowPlayingInterfaceController"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="1"/>
+        </scene>
         <!--Search-->
         <scene sceneID="6CP-fK-CVF">
             <objects>
@@ -198,7 +205,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="319.30434782608694" y="0.7589285714285714"/>
+            <point key="canvasLocation" x="295" y="300"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="osD-rO-mxG">
@@ -224,7 +231,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="342" y="300"/>
+            <point key="canvasLocation" x="477" y="300"/>
         </scene>
     </scenes>
 </document>

@@ -9,6 +9,7 @@ import WatchKit
 import Foundation
 
 class CacheTableRow: NSObject {
-    @IBOutlet weak var cacheThumbImage: WKInterfaceImage!
-    @IBOutlet weak var cacheTitleLabel: WKInterfaceLabel!
+    @IBOutlet var cacheThumbImage: WKInterfaceImage!
+    @IBOutlet var cacheTitleLabel: WKInterfaceLabel!
+    var videoId: String!
 }

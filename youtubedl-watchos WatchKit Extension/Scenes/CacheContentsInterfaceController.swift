@@ -7,12 +7,12 @@
 
 import WatchKit
 import Foundation
-import AVFoundation //what since when did i import this lol
+import SDWebImage
 
 class CacheContentsInterfaceController: WKInterfaceController {
     
     @IBOutlet weak var videoTableRow: WKInterfaceTable!
-    
+    var files = ["e"]
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
@@ -24,17 +24,29 @@ class CacheContentsInterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         //load videos with accompanying metadata.
         do {
-            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+            files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
             videoTableRow.setNumberOfRows(files.count, withRowType: "VideoRow")
-            for file in files {
+            videoTableRow.setHidden(false)
+            var ids = ["gamingmoment"]
+            
+            for i in 0 ..< files.count {
+                let file = files[i]
                 let videoID = file.components(separatedBy: ".")[0]
-                let filetype = file.components(separatedBy: ".")[1]
-                //reading
+                guard let row = videoTableRow.rowController(at: i) as? CacheTableRow else {
+                    continue
+                }
+                
+                if ids.contains(videoID) {continue}
+                
                 if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
                     let fileURL = dir.appendingPathComponent("miscCache/"+file)
                     
                     let data = try String(contentsOf: fileURL, encoding: .utf8).components(separatedBy: "\n")
                     // ok so data[0] is the video title and data[1] is image url
+                    row.cacheTitleLabel.setText(data[0])
+                    row.cacheThumbImage.sd_setImage(with: URL(string: data[1]))
+                    row.videoId = videoID
+                    ids.append(videoID)
                 }
             }
             
@@ -49,6 +61,10 @@ class CacheContentsInterfaceController: WKInterfaceController {
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
+    }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        self.pushController(withName: "CacheNowPlayingInterfaceController", context: files[rowIndex])
     }
 
 }
