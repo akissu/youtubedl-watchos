@@ -29,7 +29,13 @@ class CacheContentsInterfaceController: WKInterfaceController {
             for file in files {
                 let videoID = file.components(separatedBy: ".")[0]
                 let filetype = file.components(separatedBy: ".")[1]
-                
+                //reading
+                if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                    let fileURL = dir.appendingPathComponent("miscCache/"+file)
+                    
+                    let data = try String(contentsOf: fileURL, encoding: .utf8).components(separatedBy: "\n")
+                    // ok so data[0] is the video title and data[1] is image url
+                }
             }
             
         } catch {

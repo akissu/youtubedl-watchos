@@ -47,6 +47,18 @@ class VideoListInterfaceController: WKInterfaceController {
             } else {
                 row.thumbImg.sd_setImage(with: videos[i].img)
             }
+            
+            let file = "\(videos[i].id)" //this is the file. we will write to and read from it
+            let text = "\(videos[i].title)\n\(String(describing: videos[i].img))" //just a text
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                let fileURL = dir.appendingPathComponent("miscCache/"+file)
+                //writing
+                do {
+                    try FileManager.default.createDirectory(at: dir.appendingPathComponent("miscCache/"), withIntermediateDirectories: true)
+                    try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                }
+                catch {}
+            }
         }
     }
         

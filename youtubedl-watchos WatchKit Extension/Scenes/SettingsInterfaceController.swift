@@ -21,7 +21,6 @@ class SettingsInterfaceController: WKInterfaceController {
     let userDefaults = UserDefaults.standard
 
     @IBAction func cacheToggle(_ value: Bool) {
-
         if value == true {
             userDefaults.set(value, forKey: settingsKeys.cacheToggle)
             cacheDeleteButton.setHidden(false)
@@ -30,26 +29,46 @@ class SettingsInterfaceController: WKInterfaceController {
 
         }
         else {
-           
-            userDefaults.set(value, forKey: settingsKeys.cacheToggle)
-            
-            let documentsUrl =  FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             do {
-                try FileManager.default.removeItem(at: documentsUrl)
-
-            } catch let error {
-                print(error)
-            }
-            
-            do {
-                let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+                var totalSize = 0 as Int64
+                let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache/")
                 for file in files {
-                    try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)")
+                    if let fileAttributes = try? FileManager.default.attributesOfItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)") {
+                        if let bytes = fileAttributes[.size] as? Int64 {
+                            totalSize = totalSize+bytes
+                        }
+                    }
+                }
+                let bcf = ByteCountFormatter()
+                if ((totalSize >= 1024000000) == true) {bcf.allowedUnits = [.useGB]} else {bcf.allowedUnits = [.useMB]}
+                bcf.countStyle = .file
+                let string = bcf.string(fromByteCount: totalSize)
+                
+                if totalSize != 0 {
+                    let action1 = WKAlertAction(title: "Delete And Turn Off", style: .destructive) { [weak self] in
+                        self!.userDefaults.set(value, forKey: settingsKeys.cacheToggle)
+                        
+                        do {
+                            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+                            for file in files {
+                                try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)")
+                            }
+                        } catch {
+                            //what happened lol
+                        }
+                        self!.cacheDeleteButton.setHidden(true)
+                    }
+                    let action2 = WKAlertAction(title: "Cancel", style: .cancel) { [weak self] in
+                        self!.cacheToggle.setOn(true)
+                    }
+                    presentAlert(withTitle: "Warning", message: "You currently have \(string) of cache, are you sure you want to turn off caching?", preferredStyle: .alert, actions: [action1, action2])
+                } else {
+                    userDefaults.set(value, forKey: settingsKeys.cacheToggle)
+                    cacheDeleteButton.setHidden(true)
                 }
             } catch {
-                //what happened lol
+                //thonk
             }
-            cacheDeleteButton.setHidden(true)
         }
     }
     
@@ -62,11 +81,11 @@ class SettingsInterfaceController: WKInterfaceController {
                 for file in files {
                     try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)")
                 }
+                self!.cacheDeleteButton.setTitle("Cleared")
+                self!.cacheDeleteButton.setEnabled(false)
             } catch {
                 //what happened lol
             }
-            self!.cacheDeleteButton.setTitle("Cleared")
-            self!.cacheDeleteButton.setEnabled(false)
         }
         
         let action2 = WKAlertAction(title: "Cancel", style: .cancel) {}
@@ -130,7 +149,7 @@ class SettingsInterfaceController: WKInterfaceController {
         cacheDeleteButton.setEnabled(true)
         do {
             var totalSize = 0 as Int64
-            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache")
+            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/cache/")
             for file in files {
                 if let fileAttributes = try? FileManager.default.attributesOfItem(atPath: NSHomeDirectory()+"/Documents/cache/\(file)") {
                     if let bytes = fileAttributes[.size] as? Int64 {
@@ -142,7 +161,12 @@ class SettingsInterfaceController: WKInterfaceController {
             if ((totalSize >= 1024000000) == true) {bcf.allowedUnits = [.useGB]} else {bcf.allowedUnits = [.useMB]}
             bcf.countStyle = .file
             let string = bcf.string(fromByteCount: totalSize)
-            cacheDeleteButton.setTitle("Clear Cache (\(string))")
+            if totalSize == 0 {
+                cacheDeleteButton.setEnabled(false)
+                cacheDeleteButton.setTitle("Cleared")
+            } else {
+                cacheDeleteButton.setTitle("Clear Cache (\(string))")
+            }
         } catch {
             cacheDeleteButton.setEnabled(false)
             cacheDeleteButton.setTitle("Cleared")
