@@ -16,6 +16,12 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func willActivate() {
+        do {
+            let cacheURL = URL(string: NSHomeDirectory()+"/Documents/cache")!
+            if !FileManager.default.fileExists(atPath: cacheURL.path) {
+                try FileManager.default.createDirectory(atPath: cacheURL.path, withIntermediateDirectories: true, attributes: nil)
+            }
+        } catch {}
         
         // This method is called when watch view controller is about to be visible to user
     }
