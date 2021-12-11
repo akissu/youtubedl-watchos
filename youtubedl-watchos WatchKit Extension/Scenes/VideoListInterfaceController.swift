@@ -45,11 +45,11 @@ class VideoListInterfaceController: WKInterfaceController {
             if UserDefaults.standard.bool(forKey: settingsKeys.thumbnailsToggle) == false {
                 row.thumbImg.setHidden(true)
             } else {
-                row.thumbImg.sd_setImage(with: videos[i].img)
+                row.thumbImg.sd_setImage(with: URL(string: videos[i].img))
             }
             
             let file = "\(videos[i].id)" //this is the file. we will write to and read from it
-            let text = "\(videos[i].title)\n\(String(describing: videos[i].img))" //just a text
+            let text = "\(videos[i].title)\n\(videos[i].img)" //just a text
             if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
                 let fileURL = dir.appendingPathComponent("miscCache/"+file)
                 //writing

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch45"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -17,7 +17,7 @@
                                     <group key="rootItem" width="1" alignment="left" id="m74-j7-9oP">
                                         <items>
                                             <imageView width="45" height="27" alignment="left" verticalAlignment="center" id="rrD-ku-Mln"/>
-                                            <label alignment="left" text="Label" id="uD7-4I-4s5">
+                                            <label alignment="left" text="Label" numberOfLines="2" id="uD7-4I-4s5">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 <variation key="device=watch38mm">
                                                     <fontDescription key="font" type="system" pointSize="10"/>
@@ -32,13 +32,18 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <label alignment="center" verticalAlignment="center" text="Cache is disabled" id="Mz8-af-ba1">
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="font" type="system" pointSize="26"/>
+                        </label>
                     </items>
                     <connections>
                         <outlet property="cacheTableRow" destination="VRc-BZ-fnW" id="nVg-jR-LhM"/>
+                        <outlet property="disabledLabel" destination="Mz8-af-ba1" id="65Y-b2-2ko"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="117" y="300"/>
+            <point key="canvasLocation" x="140.8080808080808" y="530.37190082644622"/>
         </scene>
         <!--Home-->
         <scene sceneID="aou-V4-d1y">
@@ -57,7 +62,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="117" y="1"/>
+            <point key="canvasLocation" x="141" y="-24"/>
         </scene>
         <!--Settings-->
         <scene sceneID="5UF-dP-8ee">
@@ -166,12 +171,27 @@
             </objects>
             <point key="canvasLocation" x="-113.33333333333334" y="315.76446280991735"/>
         </scene>
-        <!--Cache Now Playing Interface Controller-->
+        <!--Now Playing-->
         <scene sceneID="DzC-je-eHb">
             <objects>
-                <controller id="znb-rE-3Gy" customClass="CacheNowPlayingInterfaceController"/>
+                <controller identifier="CacheNowPlayingInterfaceController" title="Now Playing" id="znb-rE-3Gy" customClass="CacheNowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" id="ptW-dh-hiu">
+                            <variation key="device=watch38mm">
+                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                            </variation>
+                        </label>
+                        <movie width="1" height="1" heightAdjustment="-45" alignment="left" id="Zwy-yF-dB0"/>
+                        <label alignment="left" text="Label" numberOfLines="0" id="SGY-qa-pNh"/>
+                    </items>
+                    <connections>
+                        <outlet property="cacheMovie" destination="Zwy-yF-dB0" id="Pqj-9Q-a4q"/>
+                        <outlet property="cacheStatusLabel" destination="SGY-qa-pNh" id="2dE-Kd-53w"/>
+                        <outlet property="cacheTitleLabel" destination="ptW-dh-hiu" id="ICB-ib-cRU"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="477" y="1"/>
+            <point key="canvasLocation" x="330" y="530"/>
         </scene>
         <!--Search-->
         <scene sceneID="6CP-fK-CVF">
@@ -205,7 +225,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="295" y="300"/>
+            <point key="canvasLocation" x="141" y="284"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="osD-rO-mxG">
@@ -231,7 +251,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="477" y="300"/>
+            <point key="canvasLocation" x="330" y="284"/>
         </scene>
     </scenes>
 </document>

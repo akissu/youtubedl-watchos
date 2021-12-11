@@ -7,7 +7,6 @@
 
 import Foundation
 import Alamofire
-import SwiftUI
 import SwiftyJSON
 import SDWebImage
 
@@ -15,9 +14,9 @@ class Video {
     
     var id: String
     var title: String
-    var img = URL(string: "")
+    var img: String
     
-    public init(id: String, title: String, img: URL) {
+    public init(id: String, title: String, img: String) {
         self.id = id
         self.title = title
         self.img = img
@@ -44,7 +43,7 @@ class Video {
                             if title == nil || vidId == nil || url == nil {
                                 //where data moment
                             } else {
-                                let video = Video(id: vidId as! String, title: title as! String, img: URL(string: url ?? "https://i.ytimg.com/vi/e/maxresdefault.jpg")!)
+                                let video = Video(id: vidId as! String, title: title as! String, img: url! )
                                 videos.append(video)
                             }
                         }
