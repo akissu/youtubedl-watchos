@@ -57,6 +57,7 @@
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Cache" id="VFF-h1-USY">
+                            <fontDescription key="font" type="system" pointSize="20"/>
                             <connections>
                                 <action selector="CacheScreen" destination="AgC-eL-Hgc" id="SY2-qe-d3k"/>
                             </connections>
