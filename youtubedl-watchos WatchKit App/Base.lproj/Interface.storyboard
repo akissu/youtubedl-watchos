@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch45"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -130,8 +130,10 @@
                         <group width="1" height="40" alignment="left" id="WBM-cw-F2V">
                             <items>
                                 <button width="40" height="40" alignment="left" verticalAlignment="center" title="-" id="FkJ-zB-ew1">
-                                    <fontDescription key="font" type="system" pointSize="30"/>
-                                    <variation key="device=watch38mm" height="35" width="35"/>
+                                    <fontDescription key="font" type="system" pointSize="45"/>
+                                    <variation key="device=watch38mm" height="35" width="35">
+                                        <fontDescription key="font" type="system" pointSize="30"/>
+                                    </variation>
                                     <connections>
                                         <action selector="resultLower" destination="BVh-TY-jCX" id="GvO-3g-eYl"/>
                                     </connections>
@@ -170,6 +172,8 @@
                         <outlet property="audioOnlyToggle" destination="5qL-2L-XaO" id="bgK-9O-RSr"/>
                         <outlet property="cacheDeleteButton" destination="sfx-11-473" id="QBq-K9-6d4"/>
                         <outlet property="cacheToggle" destination="Ntz-r1-kFg" id="ZHl-K6-3dY"/>
+                        <outlet property="minusButton" destination="FkJ-zB-ew1" id="Hkc-vH-9zS"/>
+                        <outlet property="plusButton" destination="blm-NZ-hf1" id="mQf-dQ-6Rf"/>
                         <outlet property="resultsLabel" destination="bkB-nj-7Sf" id="VHz-wM-BvW"/>
                         <outlet property="thumbnailsToggle" destination="HVk-Ub-TRL" id="yF1-8l-uQw"/>
                     </connections>
