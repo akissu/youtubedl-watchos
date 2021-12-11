@@ -16,14 +16,28 @@ class InterfaceController: WKInterfaceController {
     }
     
     override func willActivate() {
-        
         // This method is called when watch view controller is about to be visible to user
+        if UserDefaults.standard.value(forKey: settingsKeys.cacheToggle) == nil {
+            UserDefaults.standard.set(true, forKey: settingsKeys.cacheToggle)
+        }
+        cacheScreenButton.setHidden(!UserDefaults.standard.bool(forKey: settingsKeys.cacheToggle))
     }
     
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
     }
     
+    @IBOutlet weak var cacheScreenButton: WKInterfaceButton!
+    
+    @IBAction func CacheScreen() {
+        if UserDefaults.standard.bool(forKey: settingsKeys.cacheToggle) == true {
+            cacheScreenButton.setHidden(false)
+            pushController(withName: "CacheContentsInterfaceController", context: "Any")
+        }
+        else {
+            cacheScreenButton.setHidden(true)
+        }
+    }
     @IBAction func searchVideoButtonTapped() {
         
         var keywordsHistory = UserDefaults.standard.stringArray(forKey: preferencesKeys.keywordsHistory) ?? [String]()

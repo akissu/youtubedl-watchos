@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch45"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -56,8 +56,14 @@
                                 <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
                             </connections>
                         </button>
+                        <button width="1" alignment="left" title="Cache" id="VFF-h1-USY">
+                            <connections>
+                                <action selector="CacheScreen" destination="AgC-eL-Hgc" id="SY2-qe-d3k"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="cacheScreenButton" destination="VFF-h1-USY" id="8Z1-6f-KKE"/>
                         <segue destination="BVh-TY-jCX" kind="relationship" relationship="nextPage" id="cKl-k3-dts"/>
                     </connections>
                 </controller>
@@ -165,16 +171,15 @@
                         <outlet property="cacheToggle" destination="Ntz-r1-kFg" id="ZHl-K6-3dY"/>
                         <outlet property="resultsLabel" destination="bkB-nj-7Sf" id="VHz-wM-BvW"/>
                         <outlet property="thumbnailsToggle" destination="HVk-Ub-TRL" id="yF1-8l-uQw"/>
-                        <segue destination="B9M-T2-Qe7" kind="relationship" relationship="nextPage" id="krq-3h-QpL"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-113.33333333333334" y="315.76446280991735"/>
         </scene>
-        <!--Now Playing-->
+        <!--Cache Now Playing-->
         <scene sceneID="DzC-je-eHb">
             <objects>
-                <controller identifier="CacheNowPlayingInterfaceController" title="Now Playing" id="znb-rE-3Gy" customClass="CacheNowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                <controller identifier="CacheNowPlayingInterfaceController" title="Cache Now Playing" id="znb-rE-3Gy" customClass="CacheNowPlayingInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
                     <items>
                         <label alignment="left" text="Label" id="ptW-dh-hiu">
                             <variation key="device=watch38mm">
