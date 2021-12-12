@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
         <!--Cache Contents-->
@@ -51,12 +52,14 @@
                 <controller identifier="InterfaceController" title="Home" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="youtubedl_watchos_WatchKit_App" customModuleProvider="target">
                     <items>
                         <button width="1" alignment="left" title="Search" id="Uye-xf-Sds">
+                            <color key="backgroundColor" name="buttons"/>
                             <fontDescription key="font" type="system" pointSize="20"/>
                             <connections>
                                 <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
                             </connections>
                         </button>
                         <button width="1" alignment="left" title="Cache" id="VFF-h1-USY">
+                            <color key="backgroundColor" name="buttons"/>
                             <fontDescription key="font" type="system" pointSize="20"/>
                             <connections>
                                 <action selector="CacheScreen" destination="AgC-eL-Hgc" id="SY2-qe-d3k"/>
@@ -203,18 +206,24 @@
                         <table alignment="left" id="iwV-NY-kBI">
                             <items>
                                 <tableRow identifier="VideoRow" id="mqx-3d-RrS" customClass="VideoRow" customModule="youtubedl_watchos_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="tYe-qQ-bVm">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="15" id="tYe-qQ-bVm">
                                         <items>
-                                            <imageView width="45" height="27" alignment="left" verticalAlignment="center" id="C3B-Bo-uae"/>
-                                            <label alignment="left" text="Label" numberOfLines="2" id="s08-8O-Sw8">
+                                            <separator alignment="center" alpha="0.0" id="ax7-Sj-stS"/>
+                                            <label alignment="left" text="Label" id="dsR-DS-y2v">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                            <imageView alignment="center" verticalAlignment="center" id="C3B-Bo-uae"/>
+                                            <label alignment="left" verticalAlignment="bottom" text="Label" numberOfLines="2" id="s08-8O-Sw8">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 <variation key="device=watch38mm">
-                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                    <fontDescription key="font" type="system" pointSize="7"/>
                                                 </variation>
                                             </label>
+                                            <separator alignment="center" verticalAlignment="bottom" alpha="0.0" id="jAd-xy-ylA"/>
                                         </items>
                                     </group>
                                     <connections>
+                                        <outlet property="channelLabel" destination="dsR-DS-y2v" id="HkN-AW-uFJ"/>
                                         <outlet property="thumbImg" destination="C3B-Bo-uae" id="rDg-n9-hpK"/>
                                         <outlet property="titleLabel" destination="s08-8O-Sw8" id="pwG-uQ-iDH"/>
                                     </connections>
@@ -227,7 +236,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="141" y="284"/>
+            <point key="canvasLocation" x="140.8080808080808" y="283.80165289256195"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="osD-rO-mxG">
@@ -256,4 +265,9 @@
             <point key="canvasLocation" x="330" y="284"/>
         </scene>
     </scenes>
+    <resources>
+        <namedColor name="buttons">
+            <color red="0.81568627450980391" green="0.24705882352941178" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
 </document>

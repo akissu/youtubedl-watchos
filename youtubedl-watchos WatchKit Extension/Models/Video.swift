@@ -15,11 +15,13 @@ class Video {
     var id: String
     var title: String
     var img: String
-    
-    public init(id: String, title: String, img: String) {
+    var channel: String
+    public init(id: String, title: String, img: String, channel: String) {
         self.id = id
         self.title = title
         self.img = img
+        self.channel = channel
+        
     }
     
     class func getVideos(keyword: String, completion: @escaping ([Video]) -> Void) {
@@ -37,13 +39,14 @@ class Video {
                             
                             let title = item["title"]
                             let vidId = item["id"]
+                            let channel = JSON(item["author"] as Any)["name"].string
                             let thumbArray = JSON(item["thumbnails"] as Any)
                             let url = thumbArray[0]["url"].string
                             // cool also btw this is the search results thingy
-                            if title == nil || vidId == nil || url == nil {
+                            if title == nil || vidId == nil || url == nil || channel == nil {
                                 //where data moment
                             } else {
-                                let video = Video(id: vidId as! String, title: title as! String, img: url! )
+                                let video = Video(id: vidId as! String, title: title as! String, img: url!, channel: channel!)
                                 videos.append(video)
                             }
                         }

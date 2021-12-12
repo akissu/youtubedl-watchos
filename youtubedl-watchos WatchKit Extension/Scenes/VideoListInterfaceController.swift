@@ -41,6 +41,7 @@ class VideoListInterfaceController: WKInterfaceController {
                 }
             row.titleLabel.setText(videos[i].title)
             row.videoId = videos[i].id
+            row.channelLabel.setText(videos[i].channel)
             
             if UserDefaults.standard.bool(forKey: settingsKeys.thumbnailsToggle) == false {
                 row.thumbImg.setHidden(true)
