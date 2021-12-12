@@ -237,9 +237,29 @@
         <!--Information-->
         <scene sceneID="aTa-mC-Wbf">
             <objects>
-                <controller identifier="CacheInfoInterfaceController" title="Information" id="xFy-2C-kW2" customClass="CacheInfoInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                <controller identifier="CacheInfoInterfaceController" title="Information" id="xFy-2C-kW2" customClass="InfoInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Info" id="Utu-ct-get"/>
+                        <group width="1" alignment="left" id="FuA-Vd-NCt">
+                            <items>
+                                <imageView width="25" height="25" alignment="left" verticalAlignment="center" image="eye.circle.fill" catalog="system" id="Oqe-lG-sut">
+                                    <color key="tintColor" name="AccentColor"/>
+                                </imageView>
+                                <label alignment="left" verticalAlignment="center" text="10 Views" id="cNV-ZP-pwb">
+                                    <fontDescription key="font" type="system" pointSize="19"/>
+                                </label>
+                            </items>
+                        </group>
+                        <separator alignment="left" id="ool-OI-Iey">
+                            <color key="color" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </separator>
+                        <group width="1" alignment="left" id="6IK-r5-mG1">
+                            <items>
+                                <imageView width="25" height="25" alignment="left" verticalAlignment="center" image="hand.thumbsup.circle.fill" catalog="system" id="EfO-DB-i1K"/>
+                                <label alignment="left" verticalAlignment="center" text="17 Likes" id="hOb-jj-96W">
+                                    <fontDescription key="font" type="system" pointSize="19"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                 </controller>
             </objects>
@@ -324,20 +344,10 @@
             </objects>
             <point key="canvasLocation" x="348" y="283"/>
         </scene>
-        <!--Information-->
-        <scene sceneID="qHH-q1-ZKx">
-            <objects>
-                <controller identifier="InfoInterfaceController" title="Information" id="FxE-ZU-Scq">
-                    <items>
-                        <label alignment="left" text="Info" id="BAQ-QH-3y6"/>
-                    </items>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="552" y="283"/>
-        </scene>
     </scenes>
-    <color key="tintColor" name="AccentColor"/>
     <resources>
+        <image name="eye.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="hand.thumbsup.circle.fill" catalog="system" width="128" height="121"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.90588235294117647" green="0.34901960784313724" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

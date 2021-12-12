@@ -7,12 +7,16 @@
 
 import WatchKit
 import Foundation
-
+import Alamofire
 
 class CacheInfoInterfaceController: WKInterfaceController {
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        AF.request("https://"+Constants.downloadSrvInstance+"/api/v1/getInfo?url=\(context!)").responseJSON { response in
+            
+        }
+
         
         // Configure interface objects here.
     }
