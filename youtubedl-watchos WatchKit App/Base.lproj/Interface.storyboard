@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch45"/>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
@@ -56,6 +56,9 @@
                                 <button width="0.5" height="1" alignment="left" title="Search" id="Uye-xf-Sds">
                                     <color key="backgroundColor" name="buttons"/>
                                     <fontDescription key="font" type="system" pointSize="20"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" type="system" pointSize="15"/>
+                                    </variation>
                                     <connections>
                                         <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
                                     </connections>
@@ -138,6 +141,9 @@
                             <items>
                                 <button width="45" height="45" alignment="left" verticalAlignment="center" title="-" id="mXd-4l-Y2G">
                                     <fontDescription key="font" type="system" pointSize="45"/>
+                                    <variation key="device=watch38mm" height="30" width="30">
+                                        <fontDescription key="font" type="system" pointSize="35"/>
+                                    </variation>
                                     <connections>
                                         <action selector="resultLower" destination="BVh-TY-jCX" id="eNh-IC-CcA"/>
                                     </connections>
@@ -156,13 +162,16 @@
                                 </label>
                                 <button width="45" height="45" alignment="right" verticalAlignment="center" title="+" id="GsM-jK-5fI">
                                     <fontDescription key="font" type="system" pointSize="45"/>
+                                    <variation key="device=watch38mm" height="30" width="30">
+                                        <fontDescription key="font" type="system" pointSize="35"/>
+                                    </variation>
                                     <connections>
                                         <action selector="resultHigher" destination="BVh-TY-jCX" id="Rqs-Y5-Fsz"/>
                                     </connections>
                                 </button>
                             </items>
                             <color key="backgroundColor" red="0.1333208978" green="0.1332592964" blue="0.13741382960000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <variation key="device=watch38mm" height="35"/>
+                            <variation key="device=watch38mm" height="30"/>
                         </group>
                         <label width="1" alignment="left" text="Less results will load faster." numberOfLines="2" id="Alf-Bc-dtr">
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,7 +202,7 @@
                         <movie width="1" height="1" heightAdjustment="-45" alignment="left" id="Zwy-yF-dB0"/>
                         <group width="1" alignment="left" id="5kQ-cl-9yF">
                             <items>
-                                <button width="38" height="25" alignment="right" backgroundImage="info.circle" catalog="system" id="Vs7-RL-pmZ">
+                                <button width="25" height="25" alignment="right" backgroundImage="info.circle" catalog="system" id="Vs7-RL-pmZ">
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="cacheInfoScreenButton" destination="znb-rE-3Gy" id="7As-cN-cJK"/>
@@ -221,7 +230,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="552" y="530"/>
+            <point key="canvasLocation" x="552" y="526"/>
         </scene>
         <!--Search-->
         <scene sceneID="6CP-fK-CVF">
@@ -236,12 +245,15 @@
                                             <separator alignment="center" alpha="0.0" id="ax7-Sj-stS"/>
                                             <label alignment="left" text="Label" id="dsR-DS-y2v">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <variation key="device=watch38mm">
+                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                </variation>
                                             </label>
                                             <imageView alignment="center" verticalAlignment="center" id="C3B-Bo-uae"/>
                                             <label alignment="left" verticalAlignment="bottom" text="Label" numberOfLines="2" id="s08-8O-Sw8">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 <variation key="device=watch38mm">
-                                                    <fontDescription key="font" type="system" pointSize="7"/>
+                                                    <fontDescription key="font" type="system" pointSize="10"/>
                                                 </variation>
                                             </label>
                                             <separator alignment="center" verticalAlignment="bottom" alpha="0.0" id="jAd-xy-ylA"/>
@@ -281,7 +293,7 @@
                                         <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
                                     </variation>
                                 </label>
-                                <button width="38" height="25" alignment="right" backgroundImage="info.circle" catalog="system" id="Er5-7Q-3Kp">
+                                <button width="25" height="25" alignment="right" backgroundImage="info.circle" catalog="system" id="Er5-7Q-3Kp">
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
                                         <action selector="infoScreenButton" destination="IGU-mI-QIU" id="CGj-zH-3B0"/>
@@ -298,6 +310,17 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="329.69696969696969" y="283.80165289256195"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="qHH-q1-ZKx">
+            <objects>
+                <controller identifier="InfoInterfaceController" title="Information" id="FxE-ZU-Scq">
+                    <items>
+                        <label alignment="left" text="Info" id="BAQ-QH-3y6"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="552" y="283"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>

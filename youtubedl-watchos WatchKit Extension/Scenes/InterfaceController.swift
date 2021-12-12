@@ -55,11 +55,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func searchVideoButtonTapped() {
         
         var keywordsHistory = UserDefaults.standard.stringArray(forKey: preferencesKeys.keywordsHistory) ?? [String]()
-        var lastTwentyKeywordsHistory = Array(keywordsHistory.suffix(20))
-        if lastTwentyKeywordsHistory.count == 0 {
-            lastTwentyKeywordsHistory.append("Ki Jor Gariban Da") // to get the option to scribbl on first launch
-        }
-        
+        let lastTwentyKeywordsHistory = Array(keywordsHistory.suffix(20))
         self.presentTextInputController(withSuggestions: lastTwentyKeywordsHistory.reversed(), allowedInputMode: .plain) { (keywords) in
             if let keyword = keywords as? [String] {
                 if keyword.count > 0 {
