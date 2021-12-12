@@ -129,13 +129,10 @@
                         </separator>
                         <group width="1" height="40" alignment="left" id="WBM-cw-F2V">
                             <items>
-                                <button width="40" height="40" alignment="left" verticalAlignment="center" title="-" id="FkJ-zB-ew1">
+                                <button width="45" height="45" alignment="left" verticalAlignment="center" title="-" id="mXd-4l-Y2G">
                                     <fontDescription key="font" type="system" pointSize="45"/>
-                                    <variation key="device=watch38mm" height="35" width="35">
-                                        <fontDescription key="font" type="system" pointSize="30"/>
-                                    </variation>
                                     <connections>
-                                        <action selector="resultLower" destination="BVh-TY-jCX" id="GvO-3g-eYl"/>
+                                        <action selector="resultLower" destination="BVh-TY-jCX" id="eNh-IC-CcA"/>
                                     </connections>
                                 </button>
                                 <label alignment="center" verticalAlignment="center" text="30 Results" id="bkB-nj-7Sf">
@@ -150,13 +147,10 @@
                                         <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                     </variation>
                                 </label>
-                                <button width="40" height="40" alignment="right" verticalAlignment="center" title="+" id="blm-NZ-hf1">
+                                <button width="45" height="45" alignment="right" verticalAlignment="center" title="+" id="GsM-jK-5fI">
                                     <fontDescription key="font" type="system" pointSize="45"/>
-                                    <variation key="device=watch38mm" height="35" width="35">
-                                        <fontDescription key="font" type="system" pointSize="30"/>
-                                    </variation>
                                     <connections>
-                                        <action selector="resultHigher" destination="BVh-TY-jCX" id="QIm-vT-AZ1"/>
+                                        <action selector="resultHigher" destination="BVh-TY-jCX" id="Rqs-Y5-Fsz"/>
                                     </connections>
                                 </button>
                             </items>
@@ -172,8 +166,6 @@
                         <outlet property="audioOnlyToggle" destination="5qL-2L-XaO" id="bgK-9O-RSr"/>
                         <outlet property="cacheDeleteButton" destination="sfx-11-473" id="QBq-K9-6d4"/>
                         <outlet property="cacheToggle" destination="Ntz-r1-kFg" id="ZHl-K6-3dY"/>
-                        <outlet property="minusButton" destination="FkJ-zB-ew1" id="Hkc-vH-9zS"/>
-                        <outlet property="plusButton" destination="blm-NZ-hf1" id="mQf-dQ-6Rf"/>
                         <outlet property="resultsLabel" destination="bkB-nj-7Sf" id="VHz-wM-BvW"/>
                         <outlet property="thumbnailsToggle" destination="HVk-Ub-TRL" id="yF1-8l-uQw"/>
                     </connections>
