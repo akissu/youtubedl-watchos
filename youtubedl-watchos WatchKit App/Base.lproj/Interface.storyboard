@@ -193,10 +193,22 @@
                         <outlet property="cacheMovie" destination="Zwy-yF-dB0" id="Pqj-9Q-a4q"/>
                         <outlet property="cacheStatusLabel" destination="SGY-qa-pNh" id="2dE-Kd-53w"/>
                         <outlet property="cacheTitleLabel" destination="ptW-dh-hiu" id="ICB-ib-cRU"/>
+                        <segue destination="xFy-2C-kW2" kind="relationship" relationship="nextPage" id="9AP-ee-UuY"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="330" y="530"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="aTa-mC-Wbf">
+            <objects>
+                <controller identifier="CacheInfoInterfaceController" title="Information" id="xFy-2C-kW2" customClass="CacheInfoInterfaceController" customModule="youtubedl_watchos_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Info" id="Utu-ct-get"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="552" y="530"/>
         </scene>
         <!--Search-->
         <scene sceneID="6CP-fK-CVF">
@@ -265,7 +277,11 @@
             <point key="canvasLocation" x="330" y="284"/>
         </scene>
     </scenes>
+    <color key="tintColor" name="AccentColor"/>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.90588235294117647" green="0.34901960784313724" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="buttons">
             <color red="0.81568627450980391" green="0.24705882352941178" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

@@ -11,6 +11,7 @@
 		890FEA36275D57A500B573B8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 890FEA35275D57A500B573B8 /* SDWebImage */; };
 		890FEA38275D57AA00B573B8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 890FEA37275D57AA00B573B8 /* SDWebImage */; };
 		891B09D5275D0F8B00696841 /* SettingsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */; };
+		AA73145A27666D99005DB2D8 /* CacheInfoInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA73145927666D99005DB2D8 /* CacheInfoInterfaceController.swift */; };
 		AA8A948C275BF6B800EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948B275BF6B800EBABC4 /* Alamofire */; };
 		AA8A948E275BF78300EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948D275BF78300EBABC4 /* Alamofire */; };
 		AA8A9490275BF7AC00EBABC4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A948F275BF7AC00EBABC4 /* Alamofire */; };
@@ -79,6 +80,7 @@
 
 /* Begin PBXFileReference section */
 		891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInterfaceController.swift; sourceTree = "<group>"; };
+		AA73145927666D99005DB2D8 /* CacheInfoInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheInfoInterfaceController.swift; sourceTree = "<group>"; };
 		AAA7362027640DC500BF0EBF /* CacheNowPlayingInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheNowPlayingInterfaceController.swift; sourceTree = "<group>"; };
 		AAE7513D2762A03000628BC7 /* CacheTableRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheTableRow.swift; sourceTree = "<group>"; };
 		AAF50E3E275FC74500E4679D /* CacheContentsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheContentsInterfaceController.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 				891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */,
 				AAF50E3E275FC74500E4679D /* CacheContentsInterfaceController.swift */,
 				AAA7362027640DC500BF0EBF /* CacheNowPlayingInterfaceController.swift */,
+				AA73145927666D99005DB2D8 /* CacheInfoInterfaceController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				D72C9430257DB42D0056D0BA /* VideoTableRow.swift in Sources */,
 				D72C9418257DACCE0056D0BA /* Video.swift in Sources */,
 				D72C940A257DA8CD0056D0BA /* Settings.swift in Sources */,
+				AA73145A27666D99005DB2D8 /* CacheInfoInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +530,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.suuperbro.watchtube.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.llsc12.watchtube.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -568,7 +572,7 @@
 				DEVELOPMENT_TEAM = 566RT33SA2;
 				IBSC_MODULE = youtubedl_watchos_WatchKit_Extension;
 				INFOPLIST_FILE = "youtubedl-watchos WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.suuperbro.watchtube.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.llsc12.watchtube.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -606,7 +610,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 566RT33SA2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.suuperbro.watchtube;
+				PRODUCT_BUNDLE_IDENTIFIER = com.llsc12.watchtube;
 				PRODUCT_NAME = WatchTube;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
