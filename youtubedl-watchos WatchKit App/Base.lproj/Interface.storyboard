@@ -101,6 +101,9 @@
                             </connections>
                         </switch>
                         <button width="1" height="39" alignment="left" title="Clear Cache" enabled="NO" id="sfx-11-473">
+                            <variation key="device=watch38mm">
+                                <fontDescription key="font" type="system" pointSize="11"/>
+                            </variation>
                             <connections>
                                 <action selector="deleteCacheButton" destination="BVh-TY-jCX" id="uVf-zB-wCL"/>
                             </connections>
