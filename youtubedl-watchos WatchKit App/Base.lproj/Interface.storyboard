@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
@@ -301,9 +301,9 @@
                         <movie width="1" height="1" heightAdjustment="-45" alignment="left" id="T1W-VJ-tpl"/>
                         <group width="1" alignment="left" id="qB2-m4-rl2">
                             <items>
-                                <label alignment="left" text="Label" id="mYm-eV-xkZ">
+                                <label alignment="left" text="Label" numberOfLines="2" id="mYm-eV-xkZ">
                                     <variation key="device=watch38mm">
-                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                        <fontDescription key="font" type="system" pointSize="12"/>
                                     </variation>
                                 </label>
                                 <button width="25" height="25" alignment="right" backgroundImage="info.circle" catalog="system" id="Er5-7Q-3Kp">
