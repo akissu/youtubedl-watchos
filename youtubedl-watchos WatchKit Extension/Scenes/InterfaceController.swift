@@ -27,7 +27,12 @@ class InterfaceController: WKInterfaceController {
         if UserDefaults.standard.value(forKey: settingsKeys.cacheToggle) == nil {
             UserDefaults.standard.set(true, forKey: settingsKeys.cacheToggle)
         }
-        cacheScreenButton.setHidden(!UserDefaults.standard.bool(forKey: settingsKeys.cacheToggle))
+        cacheScreenButton.setEnabled(UserDefaults.standard.bool(forKey: settingsKeys.cacheToggle))
+        if UserDefaults.standard.bool(forKey: settingsKeys.cacheToggle) == true {
+            cacheScreenButton.setAlpha(1)
+        } else {
+            cacheScreenButton.setAlpha(0.6)
+        }
     }
     
     override func didDeactivate() {
@@ -38,11 +43,13 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func CacheScreen() {
         if UserDefaults.standard.bool(forKey: settingsKeys.cacheToggle) == true {
-            cacheScreenButton.setHidden(false)
+            cacheScreenButton.setEnabled(true)
+            cacheScreenButton.setAlpha(1)
             pushController(withName: "CacheContentsInterfaceController", context: "Any")
         }
         else {
-            cacheScreenButton.setHidden(true)
+            cacheScreenButton.setEnabled(false)
+            cacheScreenButton.setAlpha(0.6)
         }
     }
     @IBAction func searchVideoButtonTapped() {

@@ -46,25 +46,29 @@
             </objects>
             <point key="canvasLocation" x="140.8080808080808" y="530.37190082644622"/>
         </scene>
-        <!--Home-->
+        <!--WatchTube-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller identifier="InterfaceController" title="Home" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="youtubedl_watchos_WatchKit_App" customModuleProvider="target">
+                <controller identifier="InterfaceController" title="WatchTube" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="youtubedl_watchos_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Search" id="Uye-xf-Sds">
-                            <color key="backgroundColor" name="buttons"/>
-                            <fontDescription key="font" type="system" pointSize="20"/>
-                            <connections>
-                                <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
-                            </connections>
-                        </button>
-                        <button width="1" alignment="left" title="Cache" id="VFF-h1-USY">
-                            <color key="backgroundColor" name="buttons"/>
-                            <fontDescription key="font" type="system" pointSize="20"/>
-                            <connections>
-                                <action selector="CacheScreen" destination="AgC-eL-Hgc" id="SY2-qe-d3k"/>
-                            </connections>
-                        </button>
+                        <group width="1" height="43" alignment="left" id="NDu-0w-e9n">
+                            <items>
+                                <button width="0.5" height="1" alignment="left" title="Search" id="Uye-xf-Sds">
+                                    <color key="backgroundColor" name="buttons"/>
+                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                    <connections>
+                                        <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="1" alignment="left" title="Cache" id="VFF-h1-USY">
+                                    <color key="backgroundColor" name="buttons"/>
+                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                    <connections>
+                                        <action selector="CacheScreen" destination="AgC-eL-Hgc" id="SY2-qe-d3k"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="cacheScreenButton" destination="VFF-h1-USY" id="8Z1-6f-KKE"/>
@@ -193,7 +197,6 @@
                         <outlet property="cacheMovie" destination="Zwy-yF-dB0" id="Pqj-9Q-a4q"/>
                         <outlet property="cacheStatusLabel" destination="SGY-qa-pNh" id="2dE-Kd-53w"/>
                         <outlet property="cacheTitleLabel" destination="ptW-dh-hiu" id="ICB-ib-cRU"/>
-                        <segue destination="xFy-2C-kW2" kind="relationship" relationship="nextPage" id="9AP-ee-UuY"/>
                     </connections>
                 </controller>
             </objects>
