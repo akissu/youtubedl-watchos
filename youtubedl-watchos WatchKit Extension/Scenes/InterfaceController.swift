@@ -31,7 +31,7 @@ class InterfaceController: WKInterfaceController {
         if UserDefaults.standard.bool(forKey: settingsKeys.cacheToggle) == true {
             cacheScreenButton.setAlpha(1)
         } else {
-            cacheScreenButton.setAlpha(0.6)
+            cacheScreenButton.setAlpha(0.9745)
         }
     }
     
@@ -49,7 +49,7 @@ class InterfaceController: WKInterfaceController {
         }
         else {
             cacheScreenButton.setEnabled(false)
-            cacheScreenButton.setAlpha(0.6)
+            cacheScreenButton.setAlpha(0.9745)
         }
     }
     @IBAction func searchVideoButtonTapped() {
