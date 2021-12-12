@@ -35,7 +35,10 @@
                         </table>
                         <label alignment="center" verticalAlignment="center" text="Cache is disabled" id="Mz8-af-ba1">
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="font" type="system" pointSize="26"/>
+                            <fontDescription key="font" type="system" pointSize="23"/>
+                            <variation key="device=watch38mm">
+                                <fontDescription key="font" type="system" pointSize="16"/>
+                            </variation>
                         </label>
                     </items>
                     <connections>
@@ -44,7 +47,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="140.8080808080808" y="530.37190082644622"/>
+            <point key="canvasLocation" x="140" y="635"/>
         </scene>
         <!--WatchTube-->
         <scene sceneID="aou-V4-d1y">
@@ -57,7 +60,7 @@
                                     <color key="backgroundColor" name="buttons"/>
                                     <fontDescription key="font" type="system" pointSize="20"/>
                                     <variation key="device=watch38mm">
-                                        <fontDescription key="font" type="system" pointSize="15"/>
+                                        <fontDescription key="font" type="system" pointSize="16"/>
                                     </variation>
                                     <connections>
                                         <action selector="searchVideoButtonTapped" destination="AgC-eL-Hgc" id="HRq-U6-vMc"/>
@@ -66,6 +69,9 @@
                                 <button width="0.5" height="1" alignment="left" title="Cache" id="VFF-h1-USY">
                                     <color key="backgroundColor" name="buttons"/>
                                     <fontDescription key="font" type="system" pointSize="20"/>
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" type="system" pointSize="16"/>
+                                    </variation>
                                     <connections>
                                         <action selector="CacheScreen" destination="AgC-eL-Hgc" id="SY2-qe-d3k"/>
                                     </connections>
@@ -208,7 +214,11 @@
                                         <action selector="cacheInfoScreenButton" destination="znb-rE-3Gy" id="7As-cN-cJK"/>
                                     </connections>
                                 </button>
-                                <label alignment="left" text="Label" numberOfLines="0" id="SGY-qa-pNh"/>
+                                <label alignment="left" text="Label" numberOfLines="0" id="SGY-qa-pNh">
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" type="system" pointSize="11"/>
+                                    </variation>
+                                </label>
                             </items>
                         </group>
                     </items>
@@ -219,7 +229,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="337.93939393939394" y="526.85950413223134"/>
+            <point key="canvasLocation" x="348" y="635"/>
         </scene>
         <!--Information-->
         <scene sceneID="aTa-mC-Wbf">
@@ -230,7 +240,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="552" y="526"/>
+            <point key="canvasLocation" x="552" y="635"/>
         </scene>
         <!--Search-->
         <scene sceneID="6CP-fK-CVF">
@@ -290,7 +300,7 @@
                             <items>
                                 <label alignment="left" text="Label" id="mYm-eV-xkZ">
                                     <variation key="device=watch38mm">
-                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                        <fontDescription key="font" type="system" pointSize="11"/>
                                     </variation>
                                 </label>
                                 <button width="25" height="25" alignment="right" backgroundImage="info.circle" catalog="system" id="Er5-7Q-3Kp">
@@ -309,7 +319,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="329.69696969696969" y="283.80165289256195"/>
+            <point key="canvasLocation" x="348" y="283"/>
         </scene>
         <!--Information-->
         <scene sceneID="qHH-q1-ZKx">
