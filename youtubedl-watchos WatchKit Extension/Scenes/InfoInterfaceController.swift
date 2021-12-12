@@ -8,14 +8,19 @@
 import WatchKit
 import Foundation
 import Alamofire
+import SwiftyJSON
 
-class CacheInfoInterfaceController: WKInterfaceController {
-
+class InfoInterfaceController: WKInterfaceController {
+    @IBOutlet weak var viewsLabel: WKInterfaceLabel!
+    @IBOutlet weak var likesLabel: WKInterfaceLabel!
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        AF.request("https://"+Constants.downloadSrvInstance+"/api/v1/getInfo?url=\(context!)").responseJSON { response in
+        //AF.request("https://"+Constants.downloadSrvInstance+"/api/v1/getInfo?url=\(context!)").responseJSON { response in
             
-        }
+            //self.viewsLabel.setText("\(views!) Views")
+            //self.likesLabel.setText("\(likes!) Likes")
+        //}
 
         
         // Configure interface objects here.

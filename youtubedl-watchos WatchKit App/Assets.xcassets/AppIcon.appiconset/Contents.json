@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "wristplayer-13.png",
+      "filename" : "wristplayer-14.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -9,7 +9,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "wristplayer-12.png",
+      "filename" : "wristplayer-13.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -17,21 +17,21 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "wristplayer-10.png",
+      "filename" : "wristplayer-11.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "wristplayer-9.png",
+      "filename" : "wristplayer-10.png",
       "idiom" : "watch",
       "role" : "companionSettings",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "wristplayer-11.png",
+      "filename" : "wristplayer-12.png",
       "idiom" : "watch",
       "role" : "notificationCenter",
       "scale" : "2x",
@@ -39,7 +39,7 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "wristplayer-8.png",
+      "filename" : "wristplayer-9.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -47,7 +47,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "wristplayer-7.png",
+      "filename" : "wristplayer-8.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -55,7 +55,7 @@
       "subtype" : "40mm"
     },
     {
-      "filename" : "wristplayer-6.png",
+      "filename" : "wristplayer-7.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -63,7 +63,7 @@
       "subtype" : "41mm"
     },
     {
-      "filename" : "wristplayer-5.png",
+      "filename" : "wristplayer-6.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -71,7 +71,7 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "wristplayer-4.png",
+      "filename" : "wristplayer-5.png",
       "idiom" : "watch",
       "role" : "appLauncher",
       "scale" : "2x",
@@ -79,7 +79,7 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "wristplayer-3.png",
+      "filename" : "wristplayer-4.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -87,7 +87,7 @@
       "subtype" : "38mm"
     },
     {
-      "filename" : "wristplayer-2.png",
+      "filename" : "wristplayer-3.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -95,7 +95,7 @@
       "subtype" : "42mm"
     },
     {
-      "filename" : "wristplayer-1.png",
+      "filename" : "wristplayer-2.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -103,7 +103,7 @@
       "subtype" : "44mm"
     },
     {
-      "filename" : "wristplayer.png",
+      "filename" : "wristplayer-1.png",
       "idiom" : "watch",
       "role" : "quickLook",
       "scale" : "2x",
@@ -111,7 +111,7 @@
       "subtype" : "45mm"
     },
     {
-      "filename" : "AppIcon1024x1024.png",
+      "filename" : "wristplayer.png",
       "idiom" : "watch-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
