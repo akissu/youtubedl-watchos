@@ -21,7 +21,7 @@ class NowPlayingInterfaceController: WKInterfaceController {
     var video: Video!
     
     @IBAction func infoScreenButton() {
-        self.pushController(withName: "", context: "")
+        self.pushController(withName: "InfoInterfaceController", context: self.video.id)
     }
     override func awake(withContext context: Any?) {
         var dlType: String
