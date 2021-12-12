@@ -136,6 +136,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		894C689B27668EDC00B8B403 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				AA73145927666D99005DB2D8 /* CacheInfoInterfaceController.swift */,
+				AAF50E3E275FC74500E4679D /* CacheContentsInterfaceController.swift */,
+				AAA7362027640DC500BF0EBF /* CacheNowPlayingInterfaceController.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		D72C93C8257D97740056D0BA = {
 			isa = PBXGroup;
 			children = (
@@ -195,9 +205,7 @@
 				D72C940F257DAC210056D0BA /* VideoListInterfaceController.swift */,
 				D72C9400257D997F0056D0BA /* NowPlayingInterfaceContoller.swift */,
 				891B09D4275D0F8B00696841 /* SettingsInterfaceController.swift */,
-				AAF50E3E275FC74500E4679D /* CacheContentsInterfaceController.swift */,
-				AAA7362027640DC500BF0EBF /* CacheNowPlayingInterfaceController.swift */,
-				AA73145927666D99005DB2D8 /* CacheInfoInterfaceController.swift */,
+				894C689B27668EDC00B8B403 /* Cache */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="19162" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch45"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="19044"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
     </dependencies>
     <scenes>
@@ -191,7 +191,17 @@
                             </variation>
                         </label>
                         <movie width="1" height="1" heightAdjustment="-45" alignment="left" id="Zwy-yF-dB0"/>
-                        <label alignment="left" text="Label" numberOfLines="0" id="SGY-qa-pNh"/>
+                        <group width="1" alignment="left" id="5kQ-cl-9yF">
+                            <items>
+                                <button width="38" height="25" alignment="right" backgroundImage="info.circle" catalog="system" id="Vs7-RL-pmZ">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="cacheInfoScreenButton" destination="znb-rE-3Gy" id="7As-cN-cJK"/>
+                                    </connections>
+                                </button>
+                                <label alignment="left" text="Label" numberOfLines="0" id="SGY-qa-pNh"/>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="cacheMovie" destination="Zwy-yF-dB0" id="Pqj-9Q-a4q"/>
@@ -200,7 +210,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="330" y="530"/>
+            <point key="canvasLocation" x="337.93939393939394" y="526.85950413223134"/>
         </scene>
         <!--Information-->
         <scene sceneID="aTa-mC-Wbf">
@@ -264,11 +274,21 @@
                             </variation>
                         </label>
                         <movie width="1" height="1" heightAdjustment="-45" alignment="left" id="T1W-VJ-tpl"/>
-                        <label alignment="left" text="Label" id="mYm-eV-xkZ">
-                            <variation key="device=watch38mm">
-                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                            </variation>
-                        </label>
+                        <group width="1" alignment="left" id="qB2-m4-rl2">
+                            <items>
+                                <label alignment="left" text="Label" id="mYm-eV-xkZ">
+                                    <variation key="device=watch38mm">
+                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                    </variation>
+                                </label>
+                                <button width="38" height="25" alignment="right" backgroundImage="info.circle" catalog="system" id="Er5-7Q-3Kp">
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <connections>
+                                        <action selector="infoScreenButton" destination="IGU-mI-QIU" id="CGj-zH-3B0"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="movie" destination="T1W-VJ-tpl" id="Ty4-Wd-Ism"/>
@@ -277,16 +297,17 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="330" y="284"/>
+            <point key="canvasLocation" x="329.69696969696969" y="283.80165289256195"/>
         </scene>
     </scenes>
     <color key="tintColor" name="AccentColor"/>
     <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.90588235294117647" green="0.34901960784313724" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="buttons">
-            <color red="0.81568627450980391" green="0.24705882352941178" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.81599998474121094" green="0.24699999392032623" blue="0.23899999260902405" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

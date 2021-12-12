@@ -22,6 +22,10 @@ class CacheNowPlayingInterfaceController: WKInterfaceController {
     var id: String = ""
     var title: String = ""
     
+    @IBAction func cacheInfoScreenButton() {
+        self.pushController(withName: "CacheInfoInterfaceController", context: "")
+    }
+    
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         if context != nil {

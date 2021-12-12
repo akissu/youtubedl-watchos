@@ -20,6 +20,9 @@ class NowPlayingInterfaceController: WKInterfaceController {
 
     var video: Video!
     
+    @IBAction func infoScreenButton() {
+        self.pushController(withName: "", context: "")
+    }
     override func awake(withContext context: Any?) {
         var dlType: String
         var fileType: String
