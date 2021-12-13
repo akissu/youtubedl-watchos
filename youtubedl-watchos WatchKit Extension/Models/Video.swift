@@ -21,14 +21,12 @@ class Video {
         self.title = title
         self.img = img
         self.channel = channel
-        
-    }
+     }
     
     class func getVideos(keyword: String, completion: @escaping ([Video]) -> Void) {
         AF.request("https://"+Constants.downloadSrvInstance+"/api/v1/search?search_query=\(keyword.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "")&limit=\(String(describing: UserDefaults.standard.integer(forKey: settingsKeys.resultsCount)))").responseJSON { response in
             
             var videos = [Video]()
-            
             switch response.result {
             case .success(let json):
                     let response = json as! Dictionary<String, Any>
