@@ -56,6 +56,14 @@ class SettingsInterfaceController: WKInterfaceController {
                         } catch {
                             //what happened lol
                         }
+                        do {
+                            let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/miscCache")
+                            for file in files {
+                                try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/miscCache/\(file)")
+                            }
+                        } catch {
+                            //what happened lol
+                        }
                         self!.cacheDeleteButton.setHidden(true)
                     }
                     let action2 = WKAlertAction(title: "Cancel", style: .cancel) { [weak self] in
@@ -83,6 +91,14 @@ class SettingsInterfaceController: WKInterfaceController {
                 }
                 self!.cacheDeleteButton.setTitle("Cleared")
                 self!.cacheDeleteButton.setEnabled(false)
+            } catch {
+                //what happened lol
+            }
+            do {
+                let files = try FileManager.default.contentsOfDirectory(atPath: NSHomeDirectory()+"/Documents/miscCache")
+                for file in files {
+                    try FileManager.default.removeItem(atPath: NSHomeDirectory()+"/Documents/miscCache/\(file)")
+                }
             } catch {
                 //what happened lol
             }

@@ -15,7 +15,6 @@ class InfoInterfaceController: WKInterfaceController {
     @IBOutlet weak var likesLabel: WKInterfaceLabel!
     @IBOutlet weak var dateLabel: WKInterfaceLabel!
     @IBOutlet weak var authorLabel: WKInterfaceLabel!
-    @IBOutlet weak var categoryLabel: WKInterfaceLabel!
     @IBOutlet weak var showDescriptionButton: WKInterfaceButton!
     
     var videoDetails: Dictionary<String, Any> = [:]
@@ -26,7 +25,6 @@ class InfoInterfaceController: WKInterfaceController {
         self.viewsLabel.setText("Loading Views")
         self.dateLabel.setText("Loading Date")
         self.authorLabel.setText("Loading Channel")
-        self.categoryLabel.setText("Loading Category")
 
         AF.request("https://"+Constants.downloadSrvInstance+"/api/v1/getInfo?url=\(context!)").responseJSON { response in
             
@@ -45,7 +43,6 @@ class InfoInterfaceController: WKInterfaceController {
             self.likesLabel.setText("\(String(describing: self.videoDetails["likes"]!)) Likes")
             self.viewsLabel.setText("\(String(describing: self.videoDetails["viewCount"]!)) Views")
             self.dateLabel.setText("Uploaded \(String(describing: self.videoDetails["publishDate"]!).components(separatedBy: "-").reversed().joined(separator: "/"))")
-            self.categoryLabel.setText("\(String(describing: self.videoDetails["category"]!))")
             self.authorLabel.setText("\(String(describing: author["name"]!))")
             self.showDescriptionButton.setEnabled(true)
         }
