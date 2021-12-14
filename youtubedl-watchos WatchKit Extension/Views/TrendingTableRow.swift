@@ -8,7 +8,7 @@
 import WatchKit
 import Foundation
 
-class TrendingTableRow: NSObject {
+class TrendingRow: NSObject {
     @IBOutlet var trendingChannelLabel: WKInterfaceLabel!
     @IBOutlet var trendingTitleLabel: WKInterfaceLabel!
     @IBOutlet var trendingThumbImg: WKInterfaceImage!

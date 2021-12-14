@@ -34,7 +34,7 @@ class NowPlayingInterfaceController: WKInterfaceController {
             fileType = "mp3"
         }
 
-        let youtubedlServerURLDL = youtubedlServerURLBase + "/api/v2/\(dlType)?url=https://youtu.be"
+        let youtubedlServerURLDL = youtubedlServerURLBase + "/api/\(Constants.version)/\(dlType)?url=https://youtu.be"
         
         super.awake(withContext: context)
         

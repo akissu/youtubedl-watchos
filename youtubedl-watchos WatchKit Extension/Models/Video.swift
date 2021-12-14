@@ -57,7 +57,7 @@ class Video {
     }
     
     class func getTrending(completion: @escaping ([Video]) -> Void) {
-        AF.request("https://"+Constants.downloadSrvInstance+"/api/v2/trending?cc=uk&page=default").responseJSON { response in
+        AF.request("https://"+Constants.downloadSrvInstance+"/api/v2/trending?cc=uk&page=\(Constants.page)").responseJSON { response in
             
             var videos = [Video]()
             switch response.result {

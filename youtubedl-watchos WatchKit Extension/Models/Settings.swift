@@ -12,6 +12,8 @@ struct preferencesKeys {
 
 struct Constants {
     static let downloadSrvInstance = "llsc12.ml"
+    static let version = "v1"
+    static let page = "default"
 }
 
 struct settingsKeys {

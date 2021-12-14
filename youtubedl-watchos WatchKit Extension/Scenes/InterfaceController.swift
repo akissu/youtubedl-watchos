@@ -39,6 +39,7 @@ class InterfaceController: WKInterfaceController {
         } else {
             cacheScreenButton.setAlpha(0.9745)
         }
+        TrendingTableRow.scrollToRow(at: 2)
     }
     
     override func didDeactivate() {
@@ -82,7 +83,7 @@ class InterfaceController: WKInterfaceController {
         TrendingTableRow.setNumberOfRows(videos.count, withRowType: "TrendingRow")
         
         for i in 0 ..< videos.count {
-            guard let row = TrendingTableRow.rowController(at: i) as? TrendingTableRow else {
+            guard let row = TrendingTableRow.rowController(at: i) as? TrendingRow else {
                 continue
             }
             row.trendingTitleLabel.setText(videos[i].title)
@@ -107,5 +108,6 @@ class InterfaceController: WKInterfaceController {
                 catch {}
             }
         }
+        
     }
 }

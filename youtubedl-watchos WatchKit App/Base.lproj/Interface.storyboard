@@ -80,7 +80,7 @@
                         </group>
                         <table alignment="left" id="1bT-KK-CVM">
                             <items>
-                                <tableRow identifier="TrendingRow" id="NTp-Qs-vgG" customClass="TrendingTableRow" customModule="youtubedl_watchos_WatchKit_Extension">
+                                <tableRow identifier="TrendingRow" id="NTp-Qs-vgG" customClass="TrendingRow" customModule="youtubedl_watchos_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="15" id="pfe-zQ-z1V">
                                         <items>
                                             <separator alignment="left" alpha="0.0" id="eTR-HA-NBY"/>
