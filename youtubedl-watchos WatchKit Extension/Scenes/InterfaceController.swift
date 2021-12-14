@@ -21,6 +21,8 @@ class InterfaceController: WKInterfaceController {
         }
     }
     
+    var rowscroll = 2
+    
     override func willActivate() {
         do {
             let cacheURL = URL(string: NSHomeDirectory()+"/Documents/cache")!
@@ -39,7 +41,7 @@ class InterfaceController: WKInterfaceController {
         } else {
             cacheScreenButton.setAlpha(0.9745)
         }
-        TrendingTableRow.scrollToRow(at: 2)
+        TrendingTableRow.scrollToRow(at: rowscroll)
     }
     
     override func didDeactivate() {
@@ -108,6 +110,10 @@ class InterfaceController: WKInterfaceController {
                 catch {}
             }
         }
-        
+        TrendingTableRow.scrollToRow(at: rowscroll)
+    }
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        self.pushController(withName: "NowPlayingInterfaceController", context: videos[rowIndex])
     }
 }
