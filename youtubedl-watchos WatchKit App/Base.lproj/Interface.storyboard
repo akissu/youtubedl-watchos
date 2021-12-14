@@ -78,8 +78,39 @@
                                 </button>
                             </items>
                         </group>
+                        <table alignment="left" id="1bT-KK-CVM">
+                            <items>
+                                <tableRow identifier="TrendingRow" id="NTp-Qs-vgG" customClass="TrendingTableRow" customModule="youtubedl_watchos_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" radius="15" id="pfe-zQ-z1V">
+                                        <items>
+                                            <separator alignment="left" alpha="0.0" id="eTR-HA-NBY"/>
+                                            <label alignment="left" text="Label" id="HTU-mZ-89d">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <variation key="device=watch38mm">
+                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                </variation>
+                                            </label>
+                                            <imageView alignment="left" id="XEI-nm-I0j"/>
+                                            <label alignment="left" text="Label" id="gKL-Ed-UTd">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <variation key="device=watch38mm">
+                                                    <fontDescription key="font" type="system" pointSize="10"/>
+                                                </variation>
+                                            </label>
+                                            <separator alignment="left" alpha="0.0" id="TS8-32-wie"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="trendingChannelLabel" destination="HTU-mZ-89d" id="9QZ-BQ-LBb"/>
+                                        <outlet property="trendingThumbImg" destination="XEI-nm-I0j" id="H4X-6m-Hbp"/>
+                                        <outlet property="trendingTitleLabel" destination="gKL-Ed-UTd" id="jz4-uy-8oj"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                     <connections>
+                        <outlet property="TrendingTableRow" destination="1bT-KK-CVM" id="hdN-8t-TJp"/>
                         <outlet property="cacheScreenButton" destination="VFF-h1-USY" id="8Z1-6f-KKE"/>
                         <segue destination="BVh-TY-jCX" kind="relationship" relationship="nextPage" id="cKl-k3-dts"/>
                     </connections>

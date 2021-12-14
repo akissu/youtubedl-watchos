@@ -152,7 +152,7 @@ class SettingsInterfaceController: WKInterfaceController {
             userDefaults.set(false, forKey: settingsKeys.audioOnlyToggle)
         }
         if userDefaults.value(forKey: settingsKeys.resultsCount) == nil {
-            userDefaults.set(15, forKey: settingsKeys.resultsCount)
+            userDefaults.set(10, forKey: settingsKeys.resultsCount)
         }
 
         cacheToggle.setOn(userDefaults.bool(forKey: settingsKeys.cacheToggle))

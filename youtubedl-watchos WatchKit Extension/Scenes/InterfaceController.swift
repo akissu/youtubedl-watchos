@@ -10,9 +10,15 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
+    @IBOutlet var TrendingTableRow: WKInterfaceTable!
+    
+    var videos: [Video]!
     override func awake(withContext context: Any?) {
-        // Configure interface objects here.
+        Video.getTrending() { videos in
+            self.videos = videos
+            self.setupTable()
+            self.TrendingTableRow.setHidden(false)
+        }
     }
     
     override func willActivate() {
@@ -71,5 +77,35 @@ class InterfaceController: WKInterfaceController {
             }
         }
     }
-
+    
+    func setupTable() {
+        TrendingTableRow.setNumberOfRows(videos.count, withRowType: "TrendingRow")
+        
+        for i in 0 ..< videos.count {
+            guard let row = TrendingTableRow.rowController(at: i) as? TrendingTableRow else {
+                continue
+            }
+            row.trendingTitleLabel.setText(videos[i].title)
+            row.videoId = videos[i].id
+            row.trendingChannelLabel.setText(videos[i].channel)
+            
+            if UserDefaults.standard.bool(forKey: settingsKeys.thumbnailsToggle) == false {
+                row.trendingThumbImg.setHidden(true)
+            } else {
+                row.trendingThumbImg.sd_setImage(with: URL(string: videos[i].img)!)
+            }
+            
+            let file = "\(videos[i].id)" //this is the file. we will write to and read from it
+            let text = "\(videos[i].title)\n\(videos[i].img)" //just a text
+            if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+                let fileURL = dir.appendingPathComponent("miscCache/"+file)
+                //writing
+                do {
+                    try FileManager.default.createDirectory(at: dir.appendingPathComponent("miscCache/"), withIntermediateDirectories: true)
+                    try text.write(to: fileURL, atomically: false, encoding: .utf8)
+                }
+                catch {}
+            }
+        }
+    }
 }
