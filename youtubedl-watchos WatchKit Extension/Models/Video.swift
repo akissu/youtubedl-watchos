@@ -68,13 +68,11 @@ class Video {
                         let title = item["title"]
                         let vidId = item["videoId"]
                         let channel = item["author"]
-                        let thumbArray = JSON(item["videoThumbnails"]!)
-                        let url = thumbArray[0]["url"].string
-                        // cool also btw this is the search results thingy
-                        if title == nil || vidId == nil || url == nil || channel == nil {
+                        let thumbnail = JSON(item["videoThumbnails"]!)[1]["url"].string
+                        if title == nil || vidId == nil || channel == nil {
                             //where data moment
                         } else {
-                            let video = Video(id: vidId as! String, title: title as! String, img: url ?? "e" , channel: channel as! String)
+                            let video = Video(id: vidId as! String, title: title as! String, img: thumbnail!, channel: channel as! String)
                             videos.append(video)
                         }
                     }

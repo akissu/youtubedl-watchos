@@ -90,7 +90,7 @@
                                                     <fontDescription key="font" type="system" pointSize="10"/>
                                                 </variation>
                                             </label>
-                                            <imageView alignment="left" id="XEI-nm-I0j"/>
+                                            <imageView alignment="center" id="XEI-nm-I0j"/>
                                             <label alignment="left" text="Label" id="gKL-Ed-UTd">
                                                 <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                                                 <variation key="device=watch38mm">

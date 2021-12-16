@@ -7,7 +7,7 @@
 
 import WatchKit
 import Foundation
-
+import Alamofire
 
 class InterfaceController: WKInterfaceController {
     @IBOutlet var TrendingTableRow: WKInterfaceTable!
@@ -95,7 +95,7 @@ class InterfaceController: WKInterfaceController {
             if UserDefaults.standard.bool(forKey: settingsKeys.thumbnailsToggle) == false {
                 row.trendingThumbImg.setHidden(true)
             } else {
-                row.trendingThumbImg.sd_setImage(with: URL(string: videos[i].img)!)
+                row.trendingThumbImg.sd_setImage(with: URL(string: videos[i].img))
             }
             
             let file = "\(videos[i].id)" //this is the file. we will write to and read from it
